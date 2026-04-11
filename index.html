@@ -111,6 +111,7 @@
       --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
       --hover-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
       --transition: all 0.3s ease;
+      --radius: 12px;
     }
 
     * {
@@ -166,13 +167,15 @@
 
     .search-box input {
       width: 100%;
-      padding: 12px 40px 12px 20px;
-      border-radius: 50px;
+      padding: 11px 40px 11px 18px;
+      border-radius: 14px;
       border: 1px solid var(--border-color);
-      background-color: #fff;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
       font-family: 'Inter', sans-serif;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       color: var(--text-color);
       outline: none;
       transition: var(--transition);
@@ -180,7 +183,8 @@
 
     .search-box input:focus {
       border-color: var(--accent-color);
-      box-shadow: 0 4px 12px rgba(169, 50, 38, 0.2);
+      box-shadow: 0 0 0 3px var(--accent-glow), 0 4px 16px rgba(0, 0, 0, 0.06);
+      background: #fff;
     }
 
     .search-box i {
@@ -252,27 +256,50 @@
 
 
     .search-highlight {
-      background-color: rgba(255, 215, 0, 0.4);
+      background-color: rgba(255, 200, 0, 0.463);
       color: #000;
-      border-radius: 2px;
       padding: 0 1px;
       font-weight: 700;
-      box-shadow: 0 0 2px rgba(255, 215, 0, 0.6);
+      box-shadow: 0 0 2px rgba(255, 191, 0, 0.6);
     }
 
 
     .search-highlight.active {
       background-color: var(--accent-color);
       color: white;
+      border-bottom-color: transparent;
     }
 
     header {
       position: relative;
-      background-color: #ffffff;
+      background: linear-gradient(165deg, #ffffff 0%, #f1f5f9 45%, #e2e8f0 100%);
       color: var(--primary-color);
       text-align: center;
       padding: 6rem 1rem 4rem 1rem;
       border-bottom: 1px solid var(--border-color);
+      overflow: hidden;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: -150px;
+      right: -150px;
+      width: 450px;
+      height: 450px;
+      background: radial-gradient(circle, rgba(225, 29, 72, 0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    header::after {
+      content: '';
+      position: absolute;
+      bottom: -100px;
+      left: -100px;
+      width: 350px;
+      height: 350px;
+      background: radial-gradient(circle, rgba(59, 130, 246, 0.05) 0%, transparent 70%);
+      pointer-events: none;
     }
 
     header h1 {
@@ -280,16 +307,20 @@
       font-size: 3.5rem;
       font-weight: 700;
       margin: 1rem 0 0.5rem;
-      letter-spacing: -0.02em;
-      color: var(--primary-color);
+      letter-spacing: -0.03em;
+      background: linear-gradient(135deg, var(--primary-color) 0%, #1e293b 50%, var(--accent-color) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
 
     header p {
-      font-size: 1.25rem;
+      font-size: 1.2rem;
       font-weight: 400;
       color: var(--secondary-color);
-      max-width: 600px;
+      max-width: 580px;
       margin: 0 auto;
+      line-height: 1.7;
     }
 
     header img {
@@ -307,13 +338,26 @@
 
     .section-title {
       font-family: 'Host Grotesk', sans-serif;
-      font-size: 2rem;
+      font-size: 1.8rem;
+      font-weight: 600;
       color: var(--primary-color);
       margin-bottom: 1.5rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 3px solid var(--accent-color);
-      display: inline-block;
-      text-align: center;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      position: relative;
+      padding-bottom: 0.75rem;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      border-radius: 3px;
+      background: linear-gradient(90deg, var(--accent-color), #f97316);
     }
 
     .intro-text {
@@ -339,32 +383,68 @@
     }
 
     .tool-card {
-      background: #ffffff;
-      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-radius: var(--radius);
       overflow: hidden;
       box-shadow: var(--card-shadow);
       transition: var(--transition);
-      border: 1px solid var(--border-color);
+      border: 3px solid var(--border-color);
       display: flex;
       flex-direction: column;
       text-align: center;
+      position: relative;
+    }
+
+    .tool-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: var(--radius);
+      padding: 1px;
+      background: linear-gradient(135deg, transparent 40%, var(--accent-color) 100%);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      pointer-events: none;
+    }
+
+    .tool-card:hover::before {
+      opacity: 1;
     }
 
     .tool-card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-6px);
       box-shadow: var(--hover-shadow);
-      border-color: var(--accent-color);
+      background: rgba(255, 255, 255, 0.95);
     }
 
     .card-image {
       width: 100%;
       height: 160px;
-      background-color: #eee;
+      background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
       overflow: hidden;
       position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
+    }
+
+    .badge {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: rgba(1, 1, 17, 0.45);
+      color: white;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      z-index: 10;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
     }
 
     .card-image img {
@@ -378,17 +458,34 @@
       transform: scale(1.05);
     }
 
-    .badge {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      background: rgba(255, 255, 255, 0.9);
-      padding: 4px 8px;
-      border-radius: 4px;
-      font-size: 0.75rem;
-      font-weight: 600;
-      color: var(--primary-color);
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    .header-badges {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 30px;
+      padding: 20px;
+    }
+
+    .header-badges img {
+      height: 26px;
+      filter: grayscale(0.7);
+      transition: filter 0.2s;
+    }
+
+    .header-badges img:hover {
+      filter: grayscale(0);
+    }
+
+    @media (max-width: 768px) {
+      .header-badges {
+        padding: 15px;
+        gap: 8px;
+      }
+
+      .header-badges img {
+        height: 20px;
+      }
     }
 
     .card-content {
@@ -400,13 +497,14 @@
 
     .card-title {
       font-family: 'Host Grotesk', sans-serif;
-      font-size: 1.25rem;
+      font-size: 1.15rem;
       font-weight: 600;
       color: var(--primary-color);
-      margin-bottom: 0.75rem;
+      margin-bottom: 0.6rem;
       display: flex;
       align-items: center;
       justify-content: center;
+      letter-spacing: -0.01em;
     }
 
     .card-desc {
@@ -431,17 +529,20 @@
     }
 
     .tool-link {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
       color: var(--accent-color);
       text-decoration: none;
       font-weight: 500;
-      font-size: 0.9rem;
-      transition: color 0.2s;
+      font-size: 0.88rem;
+      transition: var(--transition);
+      padding: 2px 0;
     }
 
     .tool-link:hover {
       color: var(--accent-hover);
-      text-decoration: underline;
+      gap: 9px;
     }
 
 
@@ -462,9 +563,12 @@
     }
 
     .citation-content {
-      background: var(--light-bg);
+      background: rgba(248, 250, 252, 0.8);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
       padding: 1.5rem;
-
+      border-radius: var(--radius);
+      border: 1px solid var(--border-color);
     }
 
     .citation-text-block {
@@ -481,8 +585,10 @@
     }
 
     .citation-content1 {
-      background: #e7edf6;
-
+      background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
+      border-radius: 10px;
+      padding: 1rem 1.2rem;
+      margin-top: 0.75rem;
     }
 
     .btn-copy,
@@ -520,9 +626,9 @@
     }
 
     footer {
-      background: var(--primary-color);
-      color: rgba(255, 255, 255, 0.8);
-      padding: 2rem;
+      background: linear-gradient(135deg, #1a2747 0%, #374b6b 100%);
+      color: rgba(255, 255, 255, 0.7);
+      padding: 2.5rem 2rem;
       margin-top: auto;
       flex-shrink: 0;
     }
@@ -567,8 +673,8 @@
       border: 1px solid rgba(255, 255, 255, 0.3);
       outline: none;
       background: rgba(255, 255, 255, 0.15);
-      backdrop-filter: blur(5px);
-      -webkit-backdrop-filter: blur(5px);
+      backdrop-filter: blur(1px);
+      -webkit-backdrop-filter: blur(1px);
       color: rgb(39, 39, 39);
       cursor: pointer;
       padding: 15px;
@@ -652,36 +758,41 @@
 
 
     .filter-toggle-btn {
-      background: white;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
       border: 1px solid var(--border-color);
-      padding: 8px 16px;
-      border-radius: 20px;
+      padding: 9px 16px;
+      border-radius: 14px;
       cursor: pointer;
       font-family: 'Inter', sans-serif;
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       color: var(--text-color);
       display: flex;
       align-items: center;
       gap: 8px;
       transition: var(--transition);
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
       margin-top: 5px;
       width: fit-content;
     }
 
     .filter-toggle-btn:hover,
     .filter-toggle-btn.active {
-      background-color: var(--light-bg);
+      background: #fff;
       color: var(--accent-color);
       border-color: var(--accent-color);
+      box-shadow: 0 0 0 3px var(--accent-glow);
     }
 
     .filters-panel {
       display: none;
-      background: white;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
       padding: 1.5rem;
-      border-radius: 12px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      border-radius: var(--radius);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
       margin-top: 10px;
       width: 350px;
       max-height: 500px;
@@ -769,22 +880,23 @@
 
 
     .manual-search-btn {
-      padding: 10px 20px;
-      background-color: var(--accent-color);
+      padding: 11px 20px;
+      background: linear-gradient(135deg, var(--accent-color), #9f0c30);
       color: white;
       border: none;
-      border-radius: 50px;
+      border-radius: 14px;
       cursor: pointer;
       font-family: 'Inter', sans-serif;
       font-weight: 600;
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       transition: var(--transition);
       white-space: nowrap;
+      box-shadow: 0 2px 10px rgba(225, 29, 72, 0.2);
     }
 
     .manual-search-btn:hover {
-      background-color: var(--accent-hover);
       transform: translateY(-1px);
+      box-shadow: 0 4px 18px rgba(225, 29, 72, 0.35);
     }
 
 
@@ -816,43 +928,47 @@
       flex-wrap: wrap;
       gap: 8px;
       font-family: 'Inter', sans-serif;
-      font-size: 1.1sssssrem;
+      font-size: 1.1rem;
     }
 
     .pagination-btn {
-      background: white;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
       border: 1px solid var(--border-color);
       color: var(--text-color);
-      min-width: 55px;
-      height: 55px;
-      border-radius: 4px;
+      min-width: 48px;
+      height: 48px;
+      border-radius: 12px;
       cursor: pointer;
-      transition: all 0.2s;
+      transition: var(--transition);
       display: flex;
       align-items: center;
       justify-content: center;
       padding: 0 10px;
       user-select: none;
-      font-size: 0.9rem;
-      font-weight: 700;
+      font-size: 0.88rem;
+      font-weight: 600;
     }
 
     .pagination-btn:hover:not(:disabled):not(.active) {
       border-color: var(--accent-color);
       color: var(--accent-color);
+      box-shadow: 0 0 0 3px var(--accent-glow);
     }
 
     .pagination-btn.active {
-      background-color: var(--accent-color);
+      background: linear-gradient(135deg, var(--accent-color), #a50f34);
       color: white;
-      border-color: var(--accent-color);
+      border-color: transparent;
       font-weight: 600;
+      box-shadow: 0 4px 14px rgba(225, 29, 72, 0.2);
     }
 
     .pagination-btn:disabled {
-      opacity: 0.5;
+      opacity: 0.35;
       cursor: not-allowed;
-      background: #f1f5f9;
+      background: rgba(241, 245, 249, 0.5);
     }
 
     .pagination-ellipsis {
@@ -1034,7 +1150,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: #f4f6f8;
+  background: linear-gradient(165deg, #f8fafc, #e2e8f0);
   z-index: 99999;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
   display: flex;
@@ -1043,9 +1159,8 @@
 ">
 
     <div style="
-    background: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 15px 50px rgba(0,0,0,0.12);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
     padding: 60px;
     width: 600px;
     text-align: center;
@@ -1151,55 +1266,41 @@
 
     <header>
       <img src="assets/Fig4.png" alt="Evidence Synthesis Logo" height="190">
-      <h1>Evidence Synthesis Tools</h1>
+      <h1>Evidence Synthesis Tools.</h1>
 
       <p style="margin-bottom: 1.5rem;">A curated directory of strictly open-source software / tools for Evidence
         Synthesis.</p>
 
       <div class="header-badges">
-
-
-
-        <img src="https://img.shields.io/badge/Open%20Source-FOSS-blue?style=social" alt="Open Source FOSS">
-
-
-        <img src="https://img.shields.io/badge/Maintained-Active-success" alt="Maintenance: Active">
-
-
-
-
-        <img src="https://img.shields.io/badge/Tools-288-brightgreen" alt="Tools: 288">
-
-        <img src="https://img.shields.io/badge/FAIR-Aligned-orange" alt="FAIR Aligned">
-
-        <img src="https://img.shields.io/badge/Contributing-Welcome-brightgreen" alt="Contributing: Welcome">
-
+        <a href="https://opensource.org/licenses/Apache-2.0" target="_blank" rel="noopener noreferrer"><img
+            src="https://img.shields.io/badge/Open%20Source-FOSS-blue?style=for-the-badge" alt="Open Source FOSS"></a>
+        <img src="https://img.shields.io/badge/Maintained-Active-success?style=for-the-badge" alt="Maintenance: Active">
+        <img src="https://img.shields.io/badge/Tools-288-brightgreen?style=for-the-badge" alt="Tools: 288">
+        <img src="https://img.shields.io/badge/FAIR-Aligned-orange?style=for-the-badge" alt="FAIR Aligned">
+        <img src="https://img.shields.io/badge/Contributing-Welcome-brightgreen?style=for-the-badge"
+          alt="Contributing: Welcome">
         <a href="https://github.com/your-org/evidencesynthesis-tools/blob/main/CODE_OF_CONDUCT.md" target="_blank"
           rel="noopener noreferrer">
-          <img src="https://img.shields.io/badge/Code%20of-Conduct-blue" alt="Code of Conduct">
+          <img src="https://img.shields.io/badge/Code%20of-Conduct-blue?style=for-the-badge" alt="Code of Conduct">
         </a>
-
-        <img src="https://img.shields.io/badge/Scope-Evidence%20Synthesis-blue" alt="Scope: Evidence Synthesis">
-
-        <img src="https://img.shields.io/badge/Curation-Community-orange" alt="Community Curated">
-
+        <img src="https://img.shields.io/badge/Scope-Evidence%20Synthesis-blue?style=for-the-badge"
+          alt="Scope: Evidence Synthesis">
+        <img src="https://img.shields.io/badge/Curation-Community-orange?style=for-the-badge" alt="Community Curated">
         <a href="https://github.com/evidencesynthesis-tools/evidencesynthesis-tools.github.io/releases" target="_blank"
           rel="noopener noreferrer">
           <img
-            src="https://img.shields.io/github/v/release/evidencesynthesis-tools/evidencesynthesis-tools.github.io?display_name=tag"
+            src="https://img.shields.io/github/v/release/evidencesynthesis-tools/evidencesynthesis-tools.github.io?display_name=tag&style=for-the-badge"
             alt="Release Version">
         </a>
-
-
         <a href="https://doi.org/10.5281/zenodo.18681868" target="_blank" rel="noopener noreferrer">
-          <img src="https://zenodo.org/badge/doi/10.5281/zenodo.18681868.svg" alt="DOI">
+          <img src="https://img.shields.io/badge/DOI-10.5281%2Fzenodo.18681868-blue?style=for-the-badge" alt="DOI">
         </a>
-
-        <img src="https://img.shields.io/badge/Open%20Science-Compliant-green" alt="Open Science Compliant">
+        <img src="https://img.shields.io/badge/Open%20Science-Compliant-green?style=for-the-badge"
+          alt="Open Science Compliant">
       </div>
     </header>
 
-    </header>
+
 
 
 
@@ -3170,8 +3271,9 @@
               <div class="card-footer"><span class="citation-text">Haddaway, N. R., Page, M. J., Pritchard, C. C., &
                   McGuinness, L. A. (2022). PRISMA2020: An R package and Shiny app for producing PRISMA 2020-compliant
                   flow diagrams, with interactivity for optimised digital transparency and Open Synthesis. Campbell
-                  Systematic Reviews, 18(2), e1230.</span><a href="https://estech.shinyapps.io/PRISMA_flowdiagram_latest/"
-                  target="_blank" class="tool-link"><i class="fas fa-external-link-alt"></i> Visit Tool</a></div>
+                  Systematic Reviews, 18(2), e1230.</span><a
+                  href="https://estech.shinyapps.io/PRISMA_flowdiagram_latest/" target="_blank" class="tool-link"><i
+                    class="fas fa-external-link-alt"></i> Visit Tool</a></div>
               <div class="card-footer"><a href="https://github.com/prisma-flowdiagram/PRISMA2020" target="_blank"
                   class="tool-link"><i class="fas fa-external-link-alt"></i> GitHub Repository</a></div>
             </div>

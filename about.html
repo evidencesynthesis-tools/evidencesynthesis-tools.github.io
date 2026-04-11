@@ -56,16 +56,16 @@
       line-height: 1.6;
       color: var(--text-color);
       background-color: var(--light-bg);
-     
+
       height: 100vh;
       width: 100%;
       overflow: hidden;
-      position: relative; 
+      position: relative;
     }
 
 
     #scroll-container {
-    
+
       position: absolute;
       top: 0;
       left: 0;
@@ -73,7 +73,7 @@
       height: auto;
       will-change: transform;
       padding-top: 20px;
-     
+
       background-color: var(--light-bg);
     }
 
@@ -279,7 +279,7 @@
       color: #334155;
       white-space: pre-wrap;
       margin-bottom: 1rem;
-     
+
     }
 
     .citation-note {
@@ -329,12 +329,12 @@
       background-color: #fff0f0;
     }
 
-
     footer {
-      background: var(--primary-color);
-      color: rgba(255, 255, 255, 0.8);
-      padding: 2rem;
-      width: 100%;
+      background: linear-gradient(135deg, #1a2747 0%, #374b6b 100%);
+      color: rgba(255, 255, 255, 0.7);
+      padding: 2.5rem 2rem;
+      margin-top: auto;
+      flex-shrink: 0;
     }
 
     .footer-container {
@@ -343,6 +343,18 @@
       align-items: center;
       flex-wrap: wrap;
       gap: 1rem;
+    }
+
+    .footer-left {
+      text-align: left;
+    }
+
+    .footer-right {
+      text-align: right;
+    }
+
+    .footer-center {
+      text-align: center;
     }
 
     footer a {
@@ -365,8 +377,8 @@
       border: 1px solid rgba(255, 255, 255, 0.3);
       outline: none;
       background: rgba(255, 255, 255, 0.15);
-      backdrop-filter: blur(5px);
-      -webkit-backdrop-filter: blur(5px);
+      backdrop-filter: blur(1px);
+      -webkit-backdrop-filter: blur(1px);
       color: rgb(39, 39, 39);
       cursor: pointer;
       padding: 15px;
@@ -377,6 +389,7 @@
       visibility: hidden;
       transform: translateY(20px);
       transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
       width: 50px;
       height: 50px;
       display: flex;
@@ -458,7 +471,7 @@
         padding: 1.5rem;
       }
 
-  
+
       main {
         padding-top: 5rem;
         margin-top: 0;
@@ -701,8 +714,7 @@
           <p>This directory strives to be a comprehensive, transparent resource for research community. Contributions
             and suggestions are welcome, provided the tools meet the inclusion criteria outlined below.</p>
 
-          <div
-            style="background: #e4f1ff; padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem;">
+          <div style="background: #e4f1ff; padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem;">
             <h3 style="font-family:'Host Grotesk'; color:var(--primary-color); margin-bottom:1rem;">Inclusion Criteria
             </h3>
             <ol style="margin-left: 1.5rem;">
@@ -720,17 +732,20 @@
           </div>
 
 
-          <div
-            style="background: #e4f1ff; padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem;">
-            <h3 style="font-family:'Host Grotesk'; color:var(--primary-color); margin-bottom:1rem;">External API Dependency Policy
+          <div style="background: #e4f1ff; padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem;">
+            <h3 style="font-family:'Host Grotesk'; color:var(--primary-color); margin-bottom:1rem;">External API
+              Dependency Policy
             </h3>
             <ol style="margin-left: 1.5rem;">
-              <p>Some open-source tools interact with external databases, platforms, or APIs (e.g., literature databases or screening systems). These tools are eligible for inclusion if the software itself is fully open source, has a public code repository, and can be reused or extended.</p>
+              <p>Some open-source tools interact with external databases, platforms, or APIs (e.g., literature databases
+                or screening systems). These tools are eligible for inclusion if the software itself is fully open
+                source, has a public code repository, and can be reused or extended.</p>
               <p>Tools that rely on external APIs are acceptable if:</p>
               <li>The software uses an <strong>OSI-approved open-source license.</strong></li>
               <li>The <strong>full source code is publicly available</strong> (e.g., GitHub, GitLab).</li>
               <li>The tool’s<strong>core functionality is transparent and reusable.</strong></li>
-              <li>The external service is used<strong>only for data access or integration,</strong>not hidden proprietary logic.</li>
+              <li>The external service is used<strong>only for data access or integration,</strong>not hidden
+                proprietary logic.</li>
               <p>Such tools are also documented in the directory.</p>
             </ol>
           </div>
@@ -758,7 +773,9 @@
             <div style="margin-top: 1.5rem; text-align: left; max-width: 600px; margin-left: auto; margin-right: auto;">
               <p style="font-size: 0.95rem; color: #555;"><i class="fas fa-info-circle"></i> <strong>Note:</strong>
                 Tools that are free but closed-source, freemium, or require institutional licenses are not considered.
-                Software or tools whose source code are hosted exclusively on university or institutional websites are excluded due to concerns regarding limited accessibility, long-term stability, and the lack of sustained public availability.
+                Software or tools whose source code are hosted exclusively on university or institutional websites are
+                excluded due to concerns regarding limited accessibility, long-term stability, and the lack of sustained
+                public availability.
               </p>
             </div>
           </div>
@@ -836,12 +853,12 @@
     const scrollContainer = document.getElementById('scroll-container');
 
     const ease = 0.1;
-    const scrollSpeed = 0.6; 
+    const scrollSpeed = 0.6;
 
-  
+
     document.addEventListener('wheel', (e) => {
       window.targetScroll += e.deltaY * scrollSpeed;
-    
+
       const maxScroll = scrollContainer.scrollHeight - window.innerHeight;
       if (window.targetScroll < 0) window.targetScroll = 0;
       if (window.targetScroll > maxScroll) window.targetScroll = maxScroll;
@@ -857,7 +874,7 @@
       const deltaY = touchStartY - touchY;
       window.targetScroll += deltaY * 5.5;
       touchStartY = touchY;
-      
+
 
       const maxScroll = scrollContainer.scrollHeight - window.innerHeight;
       if (window.targetScroll < 0) window.targetScroll = 0;
@@ -884,7 +901,7 @@
 
       requestAnimationFrame(animateScroll);
     }
-    
+
     animateScroll();
 
 
