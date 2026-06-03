@@ -276,6 +276,7 @@ Individual tools retain their original citations.
 </a>
 
 © 2026 Vihaan Sahu
+
 Licensed under the **Apache License 2.0**
 
 ---
