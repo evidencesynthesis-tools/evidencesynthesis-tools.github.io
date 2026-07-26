@@ -5,10 +5,10 @@
 [![Maintenance](https://img.shields.io/badge/Maintained-Active-success)]()
 [![Platform](https://img.shields.io/badge/Platform-Pure%20HTML-lightgrey)]()
 [![Open Science](https://img.shields.io/badge/Open%20Science-Compliant-green)]()
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10.5281/zenodo.18681868.svg)](https://doi.org/10.5281/zenodo.18681868)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18681868.svg)](https://doi.org/10.5281/zenodo.18681868)
 
 
-*We recommend you to use this Directory on **Desktop**.*
+This directory represents a curated subset of the broader ecosystem mapped in the associated [systematic mapping study](https://osf.io/preprints/metaarxiv/7uskw_v1). General-purpose computational libraries and supporting infrastructure included in the research dataset are not displayed in the main directory.
 
 ---
 
@@ -59,7 +59,6 @@ The directory covers the full workflow:
 * Automation, scripting, and machine learning
 * Qualitative synthesis tools
 
-Tools range from full platforms to lightweight libraries and utilities.
 
 ---
 
@@ -240,9 +239,6 @@ This directory aims to be a comprehensive community resource.
 * Freemium software
 * Commercial or license-restricted platforms
 
----
-
-Here is a more formal and professional version:
 
 ---
 
@@ -262,7 +258,7 @@ The author welcomes future contributors and collaborators to support the long-te
 
 If you use this directory or related tools, please cite:
 
-Sahu, V. (2026). *Evidence Synthesis Tools: A curated directory of strictly open-source software / tools for Evidence Synthesis.* (Version 3.0). Zenodo.
+Sahu, V. (2026). *Evidence Synthesis Tools: A curated directory of strictly open-source software / tools for Evidence Synthesis.* (Version 4.0). Zenodo.
 [https://doi.org/10.5281/zenodo.18681868](https://doi.org/10.5281/zenodo.18681868)
 
 Individual tools retain their original citations.
@@ -275,15 +271,13 @@ Individual tools retain their original citations.
   <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Apache_Feather_Logo.svg" alt="Apache 2.0 License" height="120">
 </a>
 
-© 2026 Vihaan Sahu
-
-Licensed under the **Apache License 2.0**
+© 2026 Vihaan Sahu - Licensed under the **Apache License 2.0**
 
 ---
 
 ##  Contact
 
-* GitHub: Issues / Pull Requests / Discussions
+* GitHub: Issues / Pull Requests 
 * Email: [pteroisvolitans12@gmail.com](mailto:pteroisvolitans12@gmail.com)
 ---
 
