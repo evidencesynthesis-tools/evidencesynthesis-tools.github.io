@@ -710,6 +710,17 @@
       font-weight: 600;
     }
 
+    .mapping-study-link {
+  color: var(--accent-color);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--accent-color);
+}
+
+.mapping-study-link:hover {
+  opacity: 0.85;
+}
+
 
     .tabs-container {
       position: fixed;
@@ -1320,7 +1331,7 @@
             <strong>Open Source</strong>, <strong>non-proprietary</strong> academic tools. The complete source code must
             be <strong>publicly available</strong> (e.g., on GitHub, GitLab, or similar platforms), allowing anyone to
             inspect, reuse, and build upon it. Proprietary or closed-source software (EndNote, Covidence, DistillerSR,
-            NVivo, Stata, SAS, Rayyan, etc.) is strictly excluded. Checklists and Frameworks were also excluded.
+            NVivo, Stata, SAS, Rayyan, etc.) is strictly excluded. Checklists and Frameworks are also excluded.
           </p>
         </div>
       </section>
@@ -1347,9 +1358,12 @@
       <section class="tools-category">
         <div class="intro-text">
           <p>
-            These range from <strong>AI-assisted screening platforms</strong> that help find relevant studies amidst
-            thousands of papers, to <strong>Risk of Bias (RoB) visualization tools</strong>, to <strong>smaller scripts
-              and libraries</strong> that automate specific tasks in the synthesis pipeline.
+       This directory represents a <strong>curated subset of the broader ecosystem</strong> mapped in the associated
+<a href="https://osf.io/preprints/metaarxiv/7uskw_v1"
+   target="_blank"
+   rel="noopener noreferrer"
+   class="mapping-study-link">systematic mapping study</a>.
+<strong>General-purpose computational libraries</strong> and <strong>supporting infrastructure</strong> included in the research dataset are not displayed in this directory.
           </p>
 
 
@@ -2080,9 +2094,7 @@
               <h3 class="card-title">Critiplot</h3>
               <p class="card-desc">A specialized open-source tool for generating traffic light plots for MMAT, ROBIS,
                 GRADE, NOS, JBI Case Series/report assessments.</p>
-              <div class="card-footer"><span class="citation-text">Sahu, V. (2025). Critiplot: A Critical Appraisal
-                  Plot Visualiser for Risk of Bias Assessments (Version 2.0.0). Source code available on
-                  GitHub.</span><a href="https://critiplot.vercel.app" target="_blank" class="tool-link"><i
+              <div class="card-footer"><span class="citation-text">Sahu, V. (2025). Critiplot: A Critical Appraisal Plot Visualiser for Risk of Bias in Systematic Reviews and Meta-Analyses (v2.1.1). Zenodo. https://doi.org/10.5281/zenodo.17236600.</span><a href="https://critiplot.vercel.app" target="_blank" class="tool-link"><i
                     class="fas fa-external-link-alt"></i> Visit Tool</a></div>
               <div class="card-footer"><a href="https://github.com/aurumz-rgb/Critiplot-main" target="_blank"
                   class="tool-link"><i class="fas fa-external-link-alt"></i> GitHub Repository</a></div>
@@ -7002,7 +7014,7 @@
             <div class="citation-content1" id="apaCitation">
 
               Sahu, V. (2026). Evidence Synthesis Tools: A curated directory of strictly open-source software / tools
-              for Evidence Synthesis. (v3.0). Zenodo. https://doi.org/10.5281/zenodo.18681868
+              for Evidence Synthesis. (v4.0). Zenodo. https://doi.org/10.5281/zenodo.18681868
 
             </div>
 
@@ -7038,7 +7050,7 @@
           <a href="mailto:pteroisvolitans12@gmail.com"><i class="fas fa-envelope"></i> Contact</a>
         </div>
         <div class="footer-right">
-          Version 3.0. Compiled for Research Community.
+          Version 4.0. Compiled for Research Community.
         </div>
       </div>
     </footer>
@@ -7515,7 +7527,7 @@ AU  - Sahu, V.
 PY  - 2026
 TI  - Evidence Synthesis Tools: A curated directory of strictly open-source software / tools for Evidence Synthesis.
 JO  - Zenodo
-VL  - v3.0
+VL  - v4.0
 DO  - 10.5281/zenodo.18681868
 ER  - `;
         extension = ".ris";
@@ -7525,7 +7537,7 @@ ER  - `;
   author={Sahu, V.},
   year={2026},
   publisher={Zenodo},
-  version={v3.0},
+  version={v4.0},
   doi={10.5281/zenodo.18681868}
 }`;
         extension = ".bib";

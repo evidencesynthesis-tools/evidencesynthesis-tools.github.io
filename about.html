@@ -369,6 +369,18 @@
       opacity: 0.8;
     }
 
+
+    .mapping-study-link {
+      color: var(--accent-color);
+      font-weight: 600;
+      text-decoration: underline;
+      text-decoration-color: var(--accent-color);
+    }
+
+    .mapping-study-link:hover {
+      opacity: 0.85;
+    }
+
     #scrollToTopBtn {
       position: fixed;
       bottom: 30px;
@@ -581,14 +593,18 @@
               <li>Automation, scripting, and machine learning</li>
               <li>Qualitative synthesis</li>
             </ul>
-            <p>Tools range from full platforms to lightweight libraries and utilities.</p>
-            <p>It includes <span class="highlight-strong">261 verified open-source, non-proprietary tools</span> (up to
-              early 2026) covering the full evidence synthesis pipeline.</p>
+    
+<p>This directory presents a curated subset of the broader open-source ecosystem mapped in the associated <a href="https://osf.io/preprints/metaarxiv/7uskw_v1" target="_blank" rel="noopener noreferrer" class="mapping-study-link">systematic mapping study</a>, focusing on tools directly relevant to evidence synthesis practitioners.</p>
+
+<p>It includes <span class="highlight-strong">261 verified open-source, non-proprietary tools</span> (up to early 2026) covering the evidence synthesis pipeline, while excluding general-purpose computational dependencies.</p>
           </div>
+          
           <div class="overview-image">
             <img src="assets/banner4.png" alt="Evidence Synthesis Pipeline Figure">
           </div>
+          
         </div>
+        
       </section>
 
 
@@ -791,7 +807,7 @@
         <div class="citation-wrapper">
 
           <div class="citation-text" id="apaCitation">Sahu, V. (2026). Evidence Synthesis Tools: A curated directory of
-            strictly open-source software / tools for Evidence Synthesis. (Version 3.0). Zenodo.
+            strictly open-source software / tools for Evidence Synthesis. (Version 4.0). Zenodo.
             https://doi.org/10.5281/zenodo.18681868</div>
           <p class="citation-note">Note: The complete source code, along with the full software list and detailed
             metadata, is archived on Zenodo. Individual tools retain their original citations.</p>
@@ -837,7 +853,7 @@
           <a href="mailto:pteroisvolitans12@gmail.com"><i class="fas fa-envelope"></i> Contact</a>
         </div>
         <div class="footer-right">
-          Version 3.0. Compiled for Research Community.
+          Version 4.0. Compiled for Research Community.
         </div>
       </div>
     </footer>
@@ -951,10 +967,10 @@
       let mimeType = "text/plain";
       let extension = "";
       if (type === 'ris') {
-        content = `TY  - JOUR\nAU  - Sahu, V.\nPY  - 2026\nTI  - Evidence Synthesis Tools: A curated directory of strictly open-source software / tools for Evidence Synthesis.\nJO  - Zenodo\nVL  - v3.0\nDO  - 10.5281/zenodo.18681868\nER  - `;
+        content = `TY  - JOUR\nAU  - Sahu, V.\nPY  - 2026\nTI  - Evidence Synthesis Tools: A curated directory of strictly open-source software / tools for Evidence Synthesis.\nJO  - Zenodo\nVL  - v4.0\nDO  - 10.5281/zenodo.18681868\nER  - `;
         extension = ".ris";
       } else if (type === 'bib') {
-        content = `@misc{sahu_evidencesynthesis-tools_2026,\n  title={Evidence Synthesis Tools: A curated directory of strictly open-source software / tools for Evidence Synthesis.},\n  author={Sahu, V.},\n  year={2026},\n  publisher={Zenodo},\n  version={v3.0},\n  doi={10.5281/zenodo.18681868}\n}`;
+        content = `@misc{sahu_evidencesynthesis-tools_2026,\n  title={Evidence Synthesis Tools: A curated directory of strictly open-source software / tools for Evidence Synthesis.},\n  author={Sahu, V.},\n  year={2026},\n  publisher={Zenodo},\n  version={v4.0},\n  doi={10.5281/zenodo.18681868}\n}`;
         extension = ".bib";
       }
       const blob = new Blob([content], { type: mimeType });
