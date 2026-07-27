@@ -8,22 +8,23 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18681868.svg)](https://doi.org/10.5281/zenodo.18681868)
 
 
-This directory represents a curated subset of the broader ecosystem mapped in the associated [systematic mapping study](https://osf.io/preprints/metaarxiv/7uskw_v1). General-purpose computational libraries and supporting infrastructure included in the research dataset are not displayed in the main directory.
+This directory represents an evidence synthesis ecosystem mapped in the associated [systematic mapping study](https://osf.io/preprints/metaarxiv/7uskw_v1). In addition to purpose-built evidence synthesis platforms, this directory includes general-purpose computational libraries and infrastructure utilities used by developers to build and automate custom evidence synthesis workflows.
 
 ---
 
 ##  Overview
 
 This resource is intended for:
-
+ 
 * Systematic review researchers and students
 * Meta-analysis practitioners
-* Medical and public health researchers
-* Librarians and methodologists
+* Medical, public health, and environmental researchers
+* Librarians and information specialists
+* Methodologists and evidence synthesis teams
 * Open science advocates
-* Research software developers 
-
-The directory includes **261** open source non properietary tools / softwares available **up to early 2026**, covering all stages of the evidence synthesis pipeline.
+* Research software developers and data scientists 
+ 
+The directory includes **290** verified open-source, non-proprietary tools and software packages available **up to early 2026**, covering all stages of the evidence synthesis pipeline.
 
 ---
 
@@ -98,7 +99,7 @@ Released under a recognized license (MIT, GPL, Apache, etc.)
 
 ### 2. Public Code Repository
 
-Source code must be publicly available (GitHub, GitLab, Bitbucke, SourceForge)
+Source code must be publicly available (GitHub, GitLab, Bitbucket, SourceForge)
 
 ### 3. Non-Proprietary
 
@@ -112,7 +113,7 @@ Documentation must allow reuse, modification, and community development.
 
 ### 5. Research-Relevant
 
-Relevant to systematic reviews, evidence synthesis, meta-analysis, or closely related workflows.
+Relevant to evidence synthesis, systematic reviews, meta-analysis, or closely related workflows (including general-purpose libraries used for ES automation).
 
 **Excluded examples:**
 EndNote, Covidence, DistillerSR, NVivo, Rayyan, Stata, SAS, and similar proprietary or freemium tools.
@@ -193,11 +194,11 @@ This makes the project uniquely aligned with **Open Science and research softwar
 ## 🛠️ For Research Software Developers
 
 This repository helps developers:
-
+ 
 * Discover fully open implementations
 * Inspect real-world evidence synthesis codebases
-* Reuse and extend existing tools
-* Develop interoperable and transparent research software
+* Reuse and extend existing tools (e.g., NLP libraries, PDF parsers, ML frameworks)
+* Develop interoperable and transparent research software aligned with Open Science principles
 
 ---
 
