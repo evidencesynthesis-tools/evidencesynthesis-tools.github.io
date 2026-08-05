@@ -1,1 +1,1 @@
-https://critiplot.vercel.app/
+https://evidencesynthesis-tools.github.io
