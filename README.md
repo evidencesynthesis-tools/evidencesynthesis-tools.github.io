@@ -3,7 +3,6 @@
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 [![Open Source Only](https://img.shields.io/badge/Open%20Source-100%25-brightgreen)]()
 [![Maintenance](https://img.shields.io/badge/Maintained-Active-success)]()
-[![Platform](https://img.shields.io/badge/Platform-Pure%20HTML-lightgrey)]()
 [![Open Science](https://img.shields.io/badge/Open%20Science-Compliant-green)]()
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18681868.svg)](https://doi.org/10.5281/zenodo.18681868)
 
@@ -122,7 +121,7 @@ Software or tools whose source code is hosted exclusively on university or insti
 
 ---
 
-### 🔗 External API Dependency Policy
+###  External API Dependency Policy
 
 Some open-source tools interact with external databases, platforms, or APIs (e.g., literature databases or screening systems). These tools are eligible for inclusion if the **software itself is fully open source, has a public code repository, and can be reused or extended**.
 
@@ -138,7 +137,7 @@ Such tools are documented in the directory as **open-source integrations with ex
 
 ---
 
-## 🔍 Why Open Source?
+## 🧩 Why Open Source?
 
 This project prioritizes open-source tools to ensure:
 
@@ -150,9 +149,9 @@ This project prioritizes open-source tools to ensure:
 
 ---
 
-## 🧩 Technical Design Philosophy
+##  Technical Design Philosophy
 
-The website is intentionally implemented using **pure HTML**.
+The website is intentionally implemented using **HTML**.
 
 This ensures:
 
@@ -218,6 +217,8 @@ This repository helps developers:
 
 This directory aims to be a comprehensive community resource.
 
+[![Contributors](https://contrib.rocks/image?repo=evidencesynthesis-tools/evidencesynthesis-tools.github.io)](https://github.com/evidencesynthesis-tools/evidencesynthesis-tools.github.io/graphs/contributors)
+
 ### Submit a tool via:
 
 * Pull Request (preferred) [evidencesynthesis-tools.github.io/pulls](https://github.com/evidencesynthesis-tools/evidencesynthesis-tools.github.io/pulls)
@@ -247,7 +248,7 @@ This directory aims to be a comprehensive community resource.
 
 This project was conducted independently by the author.
 
-Artificial intelligence tools were used to support aspects of interface refinement and presentation. Specifically, **GLM-4.5V-Flash (open access)** was utilized to improve layout structure and enhance visual clarity. All conceptual development, inclusion criteria, verification of repositories and licenses, tool selection, curation decisions, and overall project design were performed **manually** solely by the author. *Please check out **Archive** for more info:* [https://doi.org/10.5281/zenodo.18692063](https://doi.org/10.5281/zenodo.18692063), [evidencesynthesis-tools/backwork](https://github.com/evidencesynthesis-tools/backwork).
+Artificial intelligence tools were used to support aspects of interface refinement and presentation. Specifically, **GLM-4.5V-Flash (open access)** was utilized to improve layout structure and enhance visual clarity. All conceptual development, inclusion criteria, verification of repositories and licenses, tool selection, curation decisions, and overall project design were performed **manually** solely by the author. *Please check out for more info:* [https://doi.org/10.5281/zenodo.18692063](https://doi.org/10.5281/zenodo.18692063), [evidencesynthesis-tools/backwork](https://github.com/evidencesynthesis-tools/backwork), [https://doi.org/10.31222/osf.io/7uskw_v1](https://doi.org/10.31222/osf.io/7uskw_v1).
 
 The initial systematic search for eligible tools and software was conducted in **October 2025**, followed by continued independent searches and verification to ensure coverage of tools available up to **February 2026**.
 
@@ -259,10 +260,10 @@ The author welcomes future contributors and collaborators to support the long-te
 
 If you use this directory or related tools, please cite:
 
-Sahu, V. (2026). *Evidence Synthesis Tools: A curated directory of strictly open-source software / tools for Evidence Synthesis.* (Version 4.0). Zenodo.
-[https://doi.org/10.5281/zenodo.18681868](https://doi.org/10.5281/zenodo.18681868)
+> Sahu, V. (2026). *Evidence Synthesis Tools: A curated directory of strictly open-source software / tools for Evidence Synthesis.* (Version 4.0). Zenodo.
+[https://doi.org/10.5281/zenodo.18681868](https://doi.org/10.5281/zenodo.18681868) 
 
-Individual tools retain their original citations.
+*Individual tools retain their original citations.*
 
 ---
 
@@ -272,14 +273,8 @@ Individual tools retain their original citations.
   <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Apache_Feather_Logo.svg" alt="Apache 2.0 License" height="120">
 </a>
 
-© 2026 Vihaan Sahu - Licensed under the **Apache License 2.0**
+© 2026 Vihaan Sahu - Open Source
 
----
-
-##  Contact
-
-* GitHub: Issues / Pull Requests 
-* Email: [pteroisvolitans12@gmail.com](mailto:pteroisvolitans12@gmail.com)
 ---
 
 
