@@ -1,4 +1,4 @@
-![Preview](assets/banner2.png)
+![Preview](assets/banner2crop.png)
 
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 [![Open Source Only](https://img.shields.io/badge/Open%20Source-100%25-brightgreen)]()
