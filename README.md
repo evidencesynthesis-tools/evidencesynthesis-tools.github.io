@@ -23,7 +23,7 @@ This resource is intended for:
 * Open science advocates
 * Research software developers and data scientists 
  
-The directory includes **290** verified open-source, non-proprietary tools and software packages available **up to early 2026**, covering all stages of the evidence synthesis pipeline.
+The directory includes **291** verified open-source, non-proprietary tools and software packages available **up to early 2026**, covering all stages of the evidence synthesis pipeline.
 
 ---
 
