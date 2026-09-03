@@ -48,7 +48,7 @@
       "@type": "WebSite",
       "name": "Evidence Synthesis Tools",
       "url": "https://evidencesynthesis-tools.github.io/",
-      "description": "A comprehensive directory of 200+ Open Source software and scripts for Evidence Synthesis.",
+      "description": "A comprehensive directory of 290+ Open Source software and scripts for Evidence Synthesis.",
       "potentialAction": {
         "@type": "SearchAction",
         "target": {
@@ -282,6 +282,10 @@
 
   <div id="scroll-container">
 
+    <main>
+
+    <div id="homeIntro">
+
     <header>
       <img src="assets/Fig4.png" alt="Evidence Synthesis Logo" height="190">
       <h1>Evidence Synthesis Tools.</h1>
@@ -293,7 +297,8 @@
         <a href="https://opensource.org/licenses/Apache-2.0" target="_blank" rel="noopener noreferrer"><img
             src="https://img.shields.io/badge/Open%20Source-blue?style=for-the-badge" alt="Open Source"></a>
         <img src="https://img.shields.io/badge/Maintained-Active-success?style=for-the-badge" alt="Maintenance: Active">
-        <img src="https://img.shields.io/badge/Tools-291-brightgreen?style=for-the-badge" alt="Tools: 291">
+        <img id="toolsCountBadge"
+          src="https://img.shields.io/badge/Tools-291-brightgreen?style=for-the-badge" alt="Tools: 291">
         <img src="https://img.shields.io/badge/FAIR-Aligned-orange?style=for-the-badge" alt="FAIR Aligned">
         <img src="https://img.shields.io/badge/Contributing-Welcome-brightgreen?style=for-the-badge"
           alt="Contributing: Welcome">
@@ -322,75 +327,58 @@
 
 
 
-    <main>
-
       <section class="tools-category">
         <h2 class="section-title">What is Evidence Synthesis?</h2>
         <div class="intro-text">
           <p>
             Evidence Synthesis is the process of bringing together all available information relevant to a research
-            question, to inform decisions and policy. It moves beyond simply summarizing single studies to generating
-            robust, generalizable findings. This rigorous process involves <strong>systematic searching, critical
-              appraisal, data extraction, and meta-analysis</strong>.
+            question, to inform decisions and policy. It moves beyond summarizing single studies to generating robust,
+            generalizable findings through <strong>systematic searching, critical appraisal, data extraction, and
+              meta-analysis</strong>.
           </p>
           <p style="margin-top: 1rem; color: var(--accent-color); font-weight: 500;">
             <i class="fas fa-exclamation-circle"></i> <strong>Directory Policy:</strong> This directory lists only
-            <strong>Open Source</strong>, <strong>non-proprietary</strong> research software and tools. The complete source code must
-            be <strong>publicly available</strong> (e.g., on GitHub, GitLab, or similar platforms), allowing anyone to
-            inspect, reuse, and build upon it. Proprietary or closed-source software (EndNote, Covidence, DistillerSR,
-            NVivo, Stata, SAS, Rayyan, etc.) is strictly excluded. Checklists and Frameworks are also excluded.
+            <strong>Open Source</strong>, <strong>non-proprietary</strong> research software and tools - the complete
+            source code must be <strong>publicly available</strong> (e.g., on GitHub, GitLab, or similar platforms),
+            allowing anyone to inspect, reuse, and build upon it. Proprietary or closed-source software (EndNote,
+            Covidence, DistillerSR, NVivo, Stata, SAS, Rayyan, etc.) and Checklists or Frameworks are strictly excluded.
+          </p>
+          <p style="margin-top: 1rem; color: #2c3e50; font-weight: 500;">
+            <i class="fas fa-code-branch"></i> <strong>Why Open Source?</strong> We prioritize open-source tools for
+            full transparency and reproducibility: researchers can inspect the underlying code instead of relying on
+            proprietary "black box" algorithms, and the community can directly fork, extend, and improve tools -
+            accelerating innovation while ensuring long-term accessibility and independence from commercial vendors.
+          </p>
+          <p style="margin-top: 1rem;">
+            This directory represents an <strong>evidence synthesis ecosystem</strong> mapped in the associated
+            <a href="https://osf.io/preprints/metaarxiv/7uskw_v1" target="_blank" rel="noopener noreferrer"
+              class="mapping-study-link">systematic mapping study</a>. In addition to purpose-built evidence synthesis
+            platforms, it includes <strong>general-purpose computational libraries</strong> and
+            <strong>infrastructure utilities</strong> used by developers to build and automate custom evidence
+            synthesis workflows.
+          </p>
+          <p style="margin-top: 1rem;">
+            It currently lists <strong class="highlight-strong"><span data-count-total>291</span></strong> open source
+            non-proprietary tools and software packages up to early <strong class="highlight-strong">2026</strong> -
+            <strong><span data-count-section="core">90</span></strong> in Core Evidence Synthesis Software,
+            <strong><span data-count-section="methodologists">131</span></strong> for Methodologists &amp;
+            Statisticians, and <strong><span data-count-section="developers">70</span></strong> for Software
+            Developers &amp; Maintainers.
           </p>
         </div>
       </section>
-
 
       <div style="text-align: center; margin: 2rem 0 4rem 0; width: 100%;">
         <img src="assets/ss.png" alt="Evidence Synthesis Workflow"
           style="max-width: 90%; height: auto; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);">
       </div>
 
-      <section class="tools-category">
-        <div class="intro-text">
-          <p style="margin-top: 1rem; color: #2c3e50; font-weight: 500;">
-            <i class="fas fa-code-branch"></i> <strong>Why Open Source?</strong> We prioritize open-source tools to
-            ensure full transparency and reproducibility in research. Open-source software allows researchers to inspect
-            the underlying code, avoiding reliance on proprietary "black box" algorithms. Furthermore, it fosters a
-            collaborative ecosystem where researchers can directly fork, extend, and improve existing tools,
-            accelerating innovation while ensuring long-term accessibility and independence from commercial vendors.
-          </p>
-        </div>
-      </section>
-
-
-      <section class="tools-category">
-        <div class="intro-text">
-          <p>
-       This directory represents an <strong>evidence synthesis ecosystem</strong> mapped in the associated
-<a href="https://osf.io/preprints/metaarxiv/7uskw_v1"
-   target="_blank"
-   rel="noopener noreferrer"
-   class="mapping-study-link">systematic mapping study</a>.
-In addition to purpose-built evidence synthesis platforms, this directory includes <strong>general-purpose computational libraries</strong> and <strong>infrastructure utilities</strong> used by developers to build and automate custom evidence synthesis workflows.
-          </p>
-
-
-        </div>
-      </section>
-
-      <section class="tools-category">
-        <div class="intro-text">
-          <p>
-            This directory specifically highlights <strong class="highlight-strong">291</strong> open source non
-            proprietary tools and software packages
-            up to early <strong class="highlight-strong">2026</strong>.
-          </p>
-        </div>
-      </section>
+    </div><!-- /homeIntro -->
 
 
       <section class="tools-category" id="sectionsOverview">
         <h2 class="section-title"><i class="fas fa-layer-group"></i> Browse the Directory</h2>
-        <p class="section-subtitle">Pick the view that matches you — every section gathers the tools
+        <p class="section-subtitle">Pick the view that matches you - every section gathers the tools
           relevant to that audience. Use the search or filters anytime to look across everything.</p>
 
         <div class="sections-picker">
@@ -399,10 +387,10 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
             <div class="section-entry-card">
               <div class="section-entry-icon"><i class="fas fa-compass"></i></div>
               <h3>Core Evidence Synthesis Software</h3>
-              <p>Ready-to-use apps, web platforms &amp; browser extensions &mdash; no coding required.
+              <p>Ready-to-use apps, web platforms &amp; browser extensions - no coding required.
                 Start here if you are a researcher, reviewer, student, or librarian.</p>
               <div class="section-entry-meta">
-                <span class="section-entry-count">90 tools</span>
+                <span class="section-entry-count" data-count-section="core" data-count-suffix=" tools">90 tools</span>
                 <span class="section-entry-cta">Browse section <i class="fas fa-arrow-right"></i></span>
               </div>
             </div>
@@ -415,7 +403,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
               <p>Code-based statistical &amp; meta-analysis packages (R, Python, Stan) for rigorous,
                 reproducible evidence synthesis.</p>
               <div class="section-entry-meta">
-                <span class="section-entry-count">131 tools</span>
+                <span class="section-entry-count" data-count-section="methodologists" data-count-suffix=" tools">131 tools</span>
                 <span class="section-entry-cta">Browse section <i class="fas fa-arrow-right"></i></span>
               </div>
             </div>
@@ -428,7 +416,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
               <p>Libraries, APIs, command-line tools &amp; automation frameworks for building, integrating,
                 and maintaining evidence synthesis workflows.</p>
               <div class="section-entry-meta">
-                <span class="section-entry-count">70 tools</span>
+                <span class="section-entry-count" data-count-section="developers" data-count-suffix=" tools">70 tools</span>
                 <span class="section-entry-cta">Browse section <i class="fas fa-arrow-right"></i></span>
               </div>
             </div>
@@ -436,7 +424,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
 
         </div>
 
-        <a class="browse-all-link" href="#directory/all">…or browse all 291 tools
+        <a class="browse-all-link" href="#directory/all">…or browse all <span data-count-total>291</span> tools
           <i class="fas fa-arrow-right"></i></a>
       </section>
 
@@ -447,7 +435,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
 
       <section class="tools-category directory-section" id="section-core" data-section="core">
         <h2 class="section-title"><i class="fas fa-compass"></i> Core Evidence Synthesis Software</h2>
-        <p class="section-subtitle">Ready-to-use apps, web platforms &amp; browser extensions — no coding required. Start here if you are a researcher, reviewer, student, or librarian.</p>
+        <p class="section-subtitle">Ready-to-use apps, web platforms &amp; browser extensions - no coding required. Start here if you are a researcher, reviewer, student, or librarian.</p>
         <div class="section-meta"><span class="section-count" id="sectionCount-core">90 tools</span></div>
 
         <div class="tools-grid" id="toolsGrid-core">
@@ -461,7 +449,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                           citing papers for systematic reviews.</p>
                         <div class="card-footer"><span class="citation-text">Haddaway, N. R., Grainger, M. J., & Gray, C. T.
                             (2022). citationchaser: A tool for transparent and efficient forward and backward citation chasing in
-                            systematic searching. Research Synthesis Methods, 13(4), 533–545.</span><a
+                            systematic searching. Research Synthesis Methods, 13(4), 533-545.</span><a
                             href="https://estech.shinyapps.io/citationchaser/" target="_blank" class="tool-link"><i
                               class="fas fa-external-link-alt"></i> Visit Tool</a></div>
                         <div class="card-footer"><a href="https://github.com/nealhaddaway/citationchaser" target="_blank"
@@ -478,7 +466,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                           builds Boolean strings across databases, and test search performance.</p>
                         <div class="card-footer"><span class="citation-text">Grames EM, Stillman AN, Tingley MW, Elphick CS. An
                             automated approach to identifying search terms for systematic reviews using keyword co-occurrence
-                            networks. Methods Ecol Evol. 2019; 10: 1645–1654.</span><a
+                            networks. Methods Ecol Evol. 2019; 10: 1645-1654.</span><a
                             href="https://elizagrames.github.io/litsearchr/" target="_blank" class="tool-link"><i
                               class="fas fa-external-link-alt"></i> Visit Tool</a></div>
                         <div class="card-footer"><a href="https://github.com/elizagrames/litsearchr" target="_blank"
@@ -511,7 +499,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                           recognizing concepts like genes, diseases, and chemicals.</p>
                         <div class="card-footer"><span class="citation-text">Wei, C.-H., Allot, A., Lai, P.-T., Leaman, R., Tian,
                             S., Luo, L., Jin, Q., Wang, Z., Chen, Q., & Lu, Z. (2024). PubTator 3.0: An AI-powered literature
-                            resource for unlocking biomedical knowledge. Nucleic Acids Research, 52(W1), W540–W546. </span><a
+                            resource for unlocking biomedical knowledge. Nucleic Acids Research, 52(W1), W540-W546. </span><a
                             href="https://www.ncbi.nlm.nih.gov/research/pubtator3/" target="_blank" class="tool-link"><i
                               class="fas fa-external-link-alt"></i> Visit Tool</a></div>
                         <div class="card-footer"><a href="https://zenodo.org/records/10839631" target="_blank"
@@ -563,7 +551,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                           within the suite.</p>
                         <div class="card-footer"><span class="citation-text">Clark, J., Glasziou, P., Del Mar, C., Bannach-Brown,
                             A., Stehlik, P., & Scott, A. M. (2020). A full systematic review was completed in 2 weeks using
-                            automation tools: A case study. Journal of Clinical Epidemiology, 121, 81–90.</span><a
+                            automation tools: A case study. Journal of Clinical Epidemiology, 121, 81-90.</span><a
                             href="https://github.com/IEBH/TERA-explorer" target="_blank" class="tool-link"><i
                               class="fas fa-external-link-alt"></i> GitHub Repository</a></div>
                       </div>
@@ -579,7 +567,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                         <div class="card-footer"><span class="citation-text">Clark, J. M., Sanders, S., Carter, M., Honeyman, D.,
                             Cleo, G., Kirkpatrick, P., Arlidge, J., & Glasziou, P. (2020). Improving the translation of search
                             strategies using the Polyglot Search Translator: A randomized controlled trial. Journal of the Medical
-                            Library Association, 108(2), 195–207.</span><a href="https://github.com/IEBH/sra-polyglot"
+                            Library Association, 108(2), 195-207.</span><a href="https://github.com/IEBH/sra-polyglot"
                             target="_blank" class="tool-link"><i class="fas fa-external-link-alt"></i> GitHub Repository</a></div>
                         <div class="card-footer"><a href="https://iebh.github.io/sra-polyglot/" target="_blank"
                             class="tool-link"><i class="fas fa-external-link-alt"></i> Visit Tool</a></div>
@@ -597,7 +585,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                         <div class="card-footer"><span class="citation-text">Karatzas, E., Papanikolaou, N., Baltoumas, F. A.,
                             Theodosiou, T., & Iliopoulos, I. (2024). BioTextQuest v2.0: An evolved tool for biomedical literature
                             mining and concept discovery. Computational and Structural Biotechnology Journal, 24,
-                            451–458.</span><a href="https://bioinformatics.med.uoc.gr/shinyapps/app/biotextquest" target="_blank"
+                            451-458.</span><a href="https://bioinformatics.med.uoc.gr/shinyapps/app/biotextquest" target="_blank"
                             class="tool-link"><i class="fas fa-external-link-alt"></i> Visit Tool</a></div>
                         <div class="card-footer"><a href="https://github.com/theodos/biotextquest_v2" target="_blank"
                             class="tool-link"><i class="fas fa-external-link-alt"></i> GitHub Repository</a></div>
@@ -627,7 +615,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                         <p class="card-desc">Open-source bibliography reference manager. The native file format used is BibTeX,
                           standard for LaTeX.</p>
                         <div class="card-footer"><span class="citation-text">Kopp, O., Feyer, T., Gipp, B., & Beel, J. (2021).
-                            JabRef: A bibliography manager. Scientific Data, 8(1), 1–4.</span><a href="https://www.jabref.org/"
+                            JabRef: A bibliography manager. Scientific Data, 8(1), 1-4.</span><a href="https://www.jabref.org/"
                             target="_blank" class="tool-link"><i class="fas fa-external-link-alt"></i> Visit Tool</a></div>
                         <div class="card-footer"><a href="https://github.com/JabRef/jabref" target="_blank" class="tool-link"><i
                               class="fas fa-external-link-alt"></i> GitHub Repository</a></div>
@@ -724,7 +712,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                         </p>
                         <div class="card-footer"><span class="citation-text">Benz, D., Hotho, A., Jäschke, R., Krause, B.,
                             Mitzlaff, F., Schmitz, C., & Stumme, G. (2010). The social bookmark and publication management system
-                            BibSonomy. International Journal on Digital Libraries, 11(3), 153–171.</span><a
+                            BibSonomy. International Journal on Digital Libraries, 11(3), 153-171.</span><a
                             href="https://www.bibsonomy.org/" target="_blank" class="tool-link"><i
                               class="fas fa-external-link-alt"></i> Visit Tool</a></div>
                         <div class="card-footer"><a href="https://bitbucket.org/bibsonomy/bibsonomy/src/master/" target="_blank"
@@ -755,7 +743,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                           in screening papers interactively and efficiently.</p>
                         <div class="card-footer"><span class="citation-text">van de Schoot, R., de Bruin, J., Schram, R., et al. (2021). An open source
                             machine learning framework for efficient and transparent systematic reviews. Nature Machine
-                            Intelligence, 3(2), 125–133.</span><a href="https://asreview.ai/" target="_blank" class="tool-link"><i
+                            Intelligence, 3(2), 125-133.</span><a href="https://asreview.ai/" target="_blank" class="tool-link"><i
                               class="fas fa-external-link-alt"></i> Visit Tool</a></div>
                         <div class="card-footer"><a href="https://github.com/asreview/asreview" target="_blank"
                             class="tool-link"><i class="fas fa-external-link-alt"></i> GitHub Repository</a></div>
@@ -785,7 +773,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                         <div class="card-footer"><span class="citation-text">Wallace, B. C., Small, K., Brodley, C. E., Lau, J., &
                             Trikalinos, T. A. (2012). Deploying an interactive machine learning system in an evidence-based
                             medicine center. Proceedings of the 2nd ACM SIGHIT International Health Informatics Symposium,
-                            823–828.</span><a href="https://abstrackr.com" target="_blank" class="tool-link"><i
+                            823-828.</span><a href="https://abstrackr.com" target="_blank" class="tool-link"><i
                               class="fas fa-external-link-alt"></i> Visit Tool</a></div>
                         <div class="card-footer"><a href="https://github.com/bwallace/abstrackr-web" target="_blank"
                             class="tool-link"><i class="fas fa-external-link-alt"></i> GitHub Repository</a></div>
@@ -802,7 +790,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                         <div class="card-footer"><span class="citation-text">Cheng, S. H., Augustin, C., Bethel, A., Gill, M.,
                             Anzaroot, S., Brun, J., DeWilde, B., Minnich, R. C., Miller, I. S., Pruett, Z., Saini, J. R., Scanlon,
                             B., Sterling, E. J., Tappel, N., Woodcock, P., & Pullin, A. S. (2018). Using machine learning to
-                            advance synthesis and use of conservation evidence. Conservation Biology, 32(4), 762–764.</span><a
+                            advance synthesis and use of conservation evidence. Conservation Biology, 32(4), 762-764.</span><a
                             href="https://www.colandrcommunity.com" target="_blank" class="tool-link"><i
                               class="fas fa-external-link-alt"></i> Visit Tool</a></div>
                         <div class="card-footer"><a href="https://github.com/datakind/permanent-colandr-back" target="_blank"
@@ -818,7 +806,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                         <p class="card-desc">A toolkit for systematic reviews in R, facilitating article screening via visual
                           inspection and topic modeling of search results.</p>
                         <div class="card-footer"><span class="citation-text">revtools: An R package to support article screening
-                            for evidence synthesis. Martin J Westgate. Res Synth Methods. 2019 Dec;10(4):606–614. doi:
+                            for evidence synthesis. Martin J Westgate. Res Synth Methods. 2019 Dec;10(4):606-614. doi:
                             10.1002/jrsm.1374.</span><a href="https://cran.r-project.org/web/packages/revtools/" target="_blank"
                             class="tool-link"><i class="fas fa-external-link-alt"></i> Visit Tool</a></div>
                         <div class="card-footer"><a href="https://github.com/mjwestgate/revtools" target="_blank"
@@ -835,7 +823,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                           interactive screening.</p>
                         <div class="card-footer"><span class="citation-text">LaJeunesse, M. J. (2016). Facilitating systematic
                             reviews, data extraction and meta-analysis with the metagear package for R. Methods in Ecology and
-                            Evolution, 7(3), 323–330.</span><a href="https://cran.r-project.org/web/packages/metagear/"
+                            Evolution, 7(3), 323-330.</span><a href="https://cran.r-project.org/web/packages/metagear/"
                             target="_blank" class="tool-link"><i class="fas fa-external-link-alt"></i> Visit Tool</a></div>
                         <div class="card-footer"><a href="https://github.com/cran/metagear" target="_blank" class="tool-link"><i
                               class="fas fa-external-link-alt"></i> GitHub Repository</a></div>
@@ -851,7 +839,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                           randomized controlled trials using NLP.</p>
                         <div class="card-footer"><span class="citation-text">Marshall, I. J., Kuiper, J., & Wallace, B. C. (2016).
                             RobotReviewer: Evaluation of a system for automatically assessing bias in clinical trials. Journal of
-                            the American Medical Informatics Association, 23(1), 193–201.</span><a
+                            the American Medical Informatics Association, 23(1), 193-201.</span><a
                             href="https://www.robotreviewer.net" target="_blank" class="tool-link"><i
                               class="fas fa-external-link-alt"></i> Visit Tool</a></div>
                         <div class="card-footer"><a href="https://github.com/ijmarshall/robotreviewer" target="_blank"
@@ -929,7 +917,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                         <p class="card-desc">A Java-based image processing program widely used to extract data points from raster
                           plots and images.</p>
                         <div class="card-footer"><span class="citation-text">Schneider, C. A., Rasband, W. S., & Eliceiri, K. W.
-                            (2012). NIH Image to ImageJ: 25 years of image analysis. Nature Methods, 9(7), 671–675.</span><a
+                            (2012). NIH Image to ImageJ: 25 years of image analysis. Nature Methods, 9(7), 671-675.</span><a
                             href="https://imagej.net/ij/" target="_blank" class="tool-link"><i
                               class="fas fa-external-link-alt"></i> Visit Tool</a></div>
                         <div class="card-footer"><a href="https://github.com/imagej/ImageJ" target="_blank" class="tool-link"><i
@@ -1010,7 +998,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                           RoB2, ROBINS-I, QUADAS-2, and more.</p>
                         <div class="card-footer"><span class="citation-text">McGuinness, L. A., & Higgins, J. P. T. (2021).
                             Risk‐of‐bias VISualization (robvis): An R package and Shiny web app for visualizing risk‐of‐bias
-                            assessments. Research Synthesis Methods, 12(1), 55–61.</span><a
+                            assessments. Research Synthesis Methods, 12(1), 55-61.</span><a
                             href="https://www.riskofbias.info/welcome/robvis-visualization-tool" target="_blank"
                             class="tool-link"><i class="fas fa-external-link-alt"></i> Visit Tool</a></div>
                         <div class="card-footer"><a href="https://github.com/mcguinlu/robvis" target="_blank" class="tool-link"><i
@@ -1026,7 +1014,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                         <p class="card-desc">Open-source tool designed to visualize Newcastle-Ottawa Scale (NOS) assessments
                           using traffic light plots.</p>
                         <div class="card-footer"><span class="citation-text">Sahu, V. (2026). NOS-TLPlot: A Specialized Python
-                            Tool for Visualizing Newcastle–Ottawa Scale Risk-of-Bias Assessments. Journal of Open Research
+                            Tool for Visualizing Newcastle-Ottawa Scale Risk-of-Bias Assessments. Journal of Open Research
                             Software, 14(1), 7.</span><a href="https://nos-tlplot.vercel.app" target="_blank" class="tool-link"><i
                               class="fas fa-external-link-alt"></i> Visit Tool</a></div>
                         <div class="card-footer"><a href="https://github.com/aurumz-rgb/nos-tlplot" target="_blank"
@@ -1047,7 +1035,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                           <span class="citation-text">Wallace, B. C., Lajeunesse, M. J., Dietz, G., Dahabreh, I. J., Trikalinos,
                             T. A., Schmid, C. H., & Gurevitch, J. (2017). OpenMEE: Intuitive, open‐source software for
                             meta‐analysis in ecology and evolutionary biology. Methods in Ecology and Evolution, 8(8),
-                            941–947.</span>
+                            941-947.</span>
                           <a href="https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.12708" target="_blank"
                             class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool</a>
@@ -1070,7 +1058,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                           <span class="citation-text">Wallace, B. C., Dahabreh, I. J., Trikalinos, T. A., Lau, J., Trow, P., &
                             Schmid, C. H. (2012). Closing the gap between methodologists and end-users: R as a computational
                             engine exhaled through a graphical user interface. BMC Medical Research Methodology, 12(1),
-                            1–41.</span>
+                            1-41.</span>
                           <a href="https://www.jstatsoft.org/article/view/v049i05" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
                           </a>
@@ -1092,7 +1080,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                         <div class="card-footer">
                           <span class="citation-text">Love, J., Selker, R., Marsman, M., Jamil, T., Dropmann, D., Verhagen, J.,
                             ... & Wagenmakers, E. J. (2019). JASP: Graphical statistical software for common statistical
-                            designs. Journal of Statistical Software, 88(2), 1–17.</span>
+                            designs. Journal of Statistical Software, 88(2), 1-17.</span>
                           <a href="https://jasp-stats.org/" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
                           </a>
@@ -1115,7 +1103,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                           reviews.</p>
                         <div class="card-footer">
                           <span class="citation-text">Dean, A. G., Sullivan, K. M., & Soe, M. M. (2013). OpenEpi: Open source
-                            epidemiologic statistics for public health. Public Health Reports, 128(6), 562–565.</span>
+                            epidemiologic statistics for public health. Public Health Reports, 128(6), 562-565.</span>
                           <a href="https://www.openepi.com/" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
                           </a>
@@ -1184,7 +1172,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                           evidence mapping and co-citation analysis.</p>
                         <div class="card-footer"><span class="citation-text">Van Eck, N. J., & Waltman, L. (2010). Software
                             survey: VOSviewer, a computer program for bibliometric mapping. Scientometrics, 84(2),
-                            523–538.</span><a href="https://www.vosviewer.com/" target="_blank" class="tool-link"><i
+                            523-538.</span><a href="https://www.vosviewer.com/" target="_blank" class="tool-link"><i
                               class="fas fa-external-link-alt"></i> Visit Tool</a></div>
                         <div class="card-footer"><a href="https://github.com/neesjanvaneck/VOSviewer-Online" target="_blank"
                             class="tool-link"><i class="fas fa-external-link-alt"></i> GitHub Repository</a></div>
@@ -1220,7 +1208,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                           serving as a bridge between spreadsheets and vector graphics editors for data analysis.</p>
                         <div class="card-footer"><span class="citation-text">Mauri, M., Elli, T., Caviglia, G., Uboldi, G., &
                             Azzi, M. (2017). RAWGraphs: A Visualisation Platform to Create Open Outputs. In Proceedings of the
-                            12th Biannual Conference on Italian SIGCHI Chapter (pp. 28:1–28:5). New York, NY, USA: ACM.</span><a
+                            12th Biannual Conference on Italian SIGCHI Chapter (pp. 28:1-28:5). New York, NY, USA: ACM.</span><a
                             href="https://rawgraphs.io/" target="_blank" class="tool-link"><i
                               class="fas fa-external-link-alt"></i> Visit Tool</a></div>
                         <div class="card-footer"><a href="https://github.com/rawgraphs/rawgraphs-app" target="_blank"
@@ -1266,7 +1254,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                           called biblioshiny for performing science mapping analysis.</p>
                         <div class="card-footer">
                           <span class="citation-text">Aria, M., & Cuccurullo, C. (2017). bibliometrix: An R-tool for
-                            comprehensive science mapping analysis. Journal of Informetrics, 11(4), 959–975.</span>
+                            comprehensive science mapping analysis. Journal of Informetrics, 11(4), 959-975.</span>
                           <a href="http://www.bibliometrix.org/" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
                           </a>
@@ -1292,7 +1280,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                         <div class="card-footer">
                           <span class="citation-text">Bastian, M., Heymann, S., & Jacomy, M. (2009). Gephi: An Open Source
                             Software for Exploring and Manipulating Networks. Proceedings of the Third International AAAI
-                            Conference on Weblogs and Social Media (ICWSM), 3(1), 361–362.</span>
+                            Conference on Weblogs and Social Media (ICWSM), 3(1), 361-362.</span>
                           <a href="https://gephi.org/" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
                           </a>
@@ -1318,7 +1306,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                         <div class="card-footer">
                           <span class="citation-text">Shannon, P., Markiel, A., Ozier, O., Baliga, N. S., Wang, J. T., Ramage,
                             D., ... & Ideker, T. (2003). Cytoscape: a software environment for integrated models of biomolecular
-                            interaction networks. Genome Research, 13(11), 2498–2504.</span>
+                            interaction networks. Genome Research, 13(11), 2498-2504.</span>
                           <a href="https://cytoscape.org/" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
                           </a>
@@ -1341,7 +1329,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                         <div class="card-footer">
                           <span class="citation-text">Rosas-Chavoya, M., et al. (2022). QGIS: A constantly growing free and
                             open-source geospatial software contributing to scientific development. Cuadernos de Investigación
-                            Geográfica, 48, 1–18.</span>
+                            Geográfica, 48, 1-18.</span>
                           <a href="https://www.qgis.org/" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
                           </a>
@@ -1363,7 +1351,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                           literature clusters by structuring unstructured data.</p>
                         <div class="card-footer">
                           <span class="citation-text">Osiński, S., & Weiss, D. (2005). Carrot2: Design of a Flexible and
-                            Efficient Web Information Retrieval Framework. In Advances in Web Intelligence (pp. 786–787).
+                            Efficient Web Information Retrieval Framework. In Advances in Web Intelligence (pp. 786-787).
                             Springer, Berlin, Heidelberg.</span>
                           <a href="https://carrot2.org/" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
@@ -1386,7 +1374,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                           to visualize the structure and evolution of scientific fields.</p>
                         <div class="card-footer">
                           <span class="citation-text">Light, R. P., Polley, D. E., & Börner, K. (2014). Open data and open code
-                            for big science of science studies. Scientometrics, 101(2), 1535–1551.</span>
+                            for big science of science studies. Scientometrics, 101(2), 1535-1551.</span>
                           <a href="https://sci2.cns.iu.edu/" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
                           </a>
@@ -1430,7 +1418,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                           modeling and time-series analysis within research projects.</p>
                         <div class="card-footer">
                           <span class="citation-text">Baiocchi, G., & Distaso, W. (2003). GRETL: Econometric software for the
-                            GNU generation. Journal of Applied Econometrics, 18(1), 105–110.</span>
+                            GNU generation. Journal of Applied Econometrics, 18(1), 105-110.</span>
                           <a href="https://gretl.sourceforge.net/" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
                           </a>
@@ -1452,7 +1440,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                           decisions, and archive materials for systematic reviews.</p>
                         <div class="card-footer">
                           <span class="citation-text">Foster, E. D., & Deardorff, A. (2017). Open Science Framework (OSF).
-                            Journal of the Medical Library Association: JMLA, 105(2), 203–206.</span>
+                            Journal of the Medical Library Association: JMLA, 105(2), 203-206.</span>
                           <a href="https://osf.io/" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
                           </a>
@@ -1616,7 +1604,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                           It helps researchers plan their projects by estimating the hours needed for various stages.</p>
                         <div class="card-footer"> <span class="citation-text">Haddaway, N. R., & Westgate, M. J. (2019).
                             Predicting the time needed for environmental systematic reviews and systematic maps. Conservation
-                            Biology, 33(2), 434–443.</span> <a href="https://predicter.github.io" target="_blank"
+                            Biology, 33(2), 434-443.</span> <a href="https://predicter.github.io" target="_blank"
                             class="tool-link"> <i class="fas fa-external-link-alt"></i> Visit Tool </a> </div>
                         <div class="card-footer"><a href="https://github.com/nealhaddaway/predicter" target="_blank"
                             class="tool-link"><i class="fas fa-external-link-alt"></i> GitHub Repository</a></div>
@@ -1733,7 +1721,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                         <div class="card-footer">
                           <span class="citation-text">Owen, R. K., Bradbury, N., Xin, Y., Cooper, N., & Sutton, A. (2019).
                             MetaInsight: An interactive web‐based tool for analyzing, interrogating, and visualizing network
-                            meta‐analyses using R‐shiny and netmeta. Research Synthesis Methods, 10(4), 569–581.</span>
+                            meta‐analyses using R‐shiny and netmeta. Research Synthesis Methods, 10(4), 569-581.</span>
                           <a href="https://crsu.shinyapps.io/MetaInsight/" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
                           </a>
@@ -1834,7 +1822,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                           making them accessible without advanced statistical programming.</p>
                         <div class="card-footer"> <span class="citation-text">Freeman, S. C., Kerby, C. R., Patel, A., Cooper,
                             N. J., Quinn, T. J., & Sutton, A. J. (2019). MetaDTA: An interactive web‐based tool for single‐test
-                            meta‐analysis of diagnostic test accuracy studies. Research Synthesis Methods, 10(4), 545–558.
+                            meta‐analysis of diagnostic test accuracy studies. Research Synthesis Methods, 10(4), 545-558.
                             doi.org.</span> <a href="https://crsu-metadta.le.ac.uk/MetaDTA/" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool </a> </div>
                         <div class="card-footer"><a href="https://github.com/CRSU-Apps/MetaDTA" target="_blank"
@@ -1852,7 +1840,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                           models to derive reference intervals and visualize the results.</p>
                         <div class="card-footer"> <span class="citation-text">Jiang, Z., Cao, W., Chu, H., Bazerbachi, F., &
                             Siegel, L. (2023). RIMeta: An R shiny tool for estimating the reference interval from a
-                            meta-analysis. Research Synthesis Methods, 14(3), 468–478.</span> <a
+                            meta-analysis. Research Synthesis Methods, 14(3), 468-478.</span> <a
                             href="https://cers.shinyapps.io/RIMeta/" target="_blank" class="tool-link"> <i
                               class="fas fa-external-link-alt"></i> Visit Tool </a> </div>
                         <div class="card-footer"> <a href="https://github.com/liannesiegel/RIMeta" target="_blank"
@@ -1870,7 +1858,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                           patient data approaches, including ANCOVA-based methods.</p>
                         <div class="card-footer"> <span class="citation-text">Papadimitropoulou, K., van Atteveldt, W., & White,
                             I. R. (2022). MA-cont:pre/post effect size: An interactive tool for the meta-analysis of continuous
-                            outcomes using R Shiny. Research Synthesis Methods, 13(5), 649–660.</span> <a
+                            outcomes using R Shiny. Research Synthesis Methods, 13(5), 649-660.</span> <a
                             href="https://katerina-pap.shinyapps.io/MA-cont-prepostES/" target="_blank" class="tool-link"> <i
                               class="fas fa-external-link-alt"></i> Visit Tool </a> </div>
                         <div class="card-footer"> <a href="https://github.com/Katerina-Pap/MA-cont-shiny-app" target="_blank"
@@ -1943,7 +1931,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                         <div class="card-footer"> <span class="citation-text">Marchezan, L., Bolfe, G., Rodrigues, E.,
                             Bernardino, M., & Basso, F. P. (2019). Thoth: A Web-based Tool to Support Systematic Reviews. In
                             Proceedings of the 2019 ACM/IEEE International Symposium on Empirical Software Engineering and
-                            Measurement (ESEM) (pp. 1–6). IEEE. IEEE Computer Society</span> <a
+                            Measurement (ESEM) (pp. 1-6). IEEE. IEEE Computer Society</span> <a
                             href="http://lesse.com.br/tools/thoth/" target="_blank" class="tool-link"> <i
                               class="fas fa-external-link-alt"></i> Visit Tool </a> </div>
                         <div class="card-footer"> <a href="https://github.com/unipampa-lesse/thoth-legacy" target="_blank"
@@ -2064,7 +2052,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                         <div class="card-footer">
                           <span class="citation-text">Garnica, V. C., Shah, D. A., Esker, P. D., & Ojiambo, P. S. (2024). MSE
                             FINDR: A Shiny R application to estimate mean square error using treatment means and post hoc test
-                            results. Plant Disease, 108(7), 1937–1941.</span>
+                            results. Plant Disease, 108(7), 1937-1941.</span>
                           <a href="https://apsjournals.apsnet.org/doi/10.1094/PDIS-11-23-2519-SR?url_ver=Z39.88-2003&rfr_id=ori:rid:crossref.org&rfr_dat=cr_pub%20%200pubmed"
                             target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
@@ -2117,7 +2105,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                         <div class="card-footer">
                           <span class="citation-text">Martin, P., Surian, D., Bashir, R., Bourgeois, F. T., & Dunn, A. G.
                             (2019). Trial2rev: Combining machine learning and crowd-sourcing to create a shared space for
-                            updating systematic reviews. JAMIA Open, 2(1), 15–22.</span>
+                            updating systematic reviews. JAMIA Open, 2(1), 15-22.</span>
                           <a href="https://pubmed.ncbi.nlm.nih.gov/31984340/" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
                           </a>
@@ -2276,7 +2264,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                           rainforest plots and subgroup visualizations.</p>
                         <div class="card-footer"><span class="citation-text">Kossmeier, M., Tran, U. S., & Voracek, M. (2019).
                             Visual inference for the funnel plot in meta-analysis. Zeitschrift für Psychologie, 227(1),
-                            83–84.</span><a href="https://cloud.r-project.org/web/packages/metaviz/vignettes/metaviz.html"
+                            83-84.</span><a href="https://cloud.r-project.org/web/packages/metaviz/vignettes/metaviz.html"
                             target="_blank" class="tool-link"><i class="fas fa-external-link-alt"></i> Visit Tool</a></div>
                         <div class="card-footer"><a href="https://github.com/Mkossmeier/metaviz" target="_blank"
                             class="tool-link"><i class="fas fa-external-link-alt"></i> GitHub Repository</a></div>
@@ -2293,7 +2281,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                           for various effect measures including risk ratios and odds ratios.</p>
                         <div class="card-footer"> <span class="citation-text">VanderWeele, T. J., & Ding, P. (2017). Sensitivity
                             analysis in observational research: Introducing the E-value. Annals of Internal Medicine, 167(4),
-                            268–274.</span><a href="https://cran.r-project.org/web/packages/EValue/" target="_blank"
+                            268-274.</span><a href="https://cran.r-project.org/web/packages/EValue/" target="_blank"
                             class="tool-link"><i class="fas fa-external-link-alt"></i> Visit Tool</a></div>
                         <div class="card-footer"> <a href="https://github.com/cran/EValue" target="_blank" class="tool-link"> <i
                               class="fas fa-external-link-alt"></i> GitHub Repository</a></div>
@@ -2309,7 +2297,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                           correction, data cleaning, and aggregation of validity coefficients.</p>
                         <div class="card-footer"><span class="citation-text">Dahlke, J. A., & Wiernik, B. M. (2019). psychmeta:
                             An R package for psychometric meta-analysis. Applied Psychological Measurement, 43(5),
-                            415–416.</span><a href="https://psychmeta.com" target="_blank" class="tool-link"><i
+                            415-416.</span><a href="https://psychmeta.com" target="_blank" class="tool-link"><i
                               class="fas fa-external-link-alt"></i> Visit Tool</a></div>
                         <div class="card-footer"><a href="https://github.com/psychmeta/psychmeta" target="_blank"
                             class="tool-link"><i class="fas fa-external-link-alt"></i> GitHub Repository</a></div>
@@ -2327,7 +2315,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                           meta-analyses.</p>
                         <div class="card-footer"> <span class="citation-text">Nuijten, M. B., Hartgerink, C. H. J., van Assen,
                             M. A. L. M., Eppelinga, S., & Wicherts, J. M. (2016). The prevalence of statistical reporting errors
-                            in psychology (1985–2013). Behavior Research Methods, 48(4), 1205–1226.</span>
+                            in psychology (1985-2013). Behavior Research Methods, 48(4), 1205-1226.</span>
                           <a href="https://cran.r-project.org/web/packages/statcheck/index.html" target="_blank"
                             class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool </a>
@@ -2347,7 +2335,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                         <p class="card-desc">A comprehensive R package for conducting meta-analyses, providing functions for
                           fixed, random, and mixed-effects models, meta-regression, and multilevel models.</p>
                         <div class="card-footer"><span class="citation-text">Viechtbauer, W. (2010). Conducting meta-analyses in
-                            R with the metafor package. Journal of Statistical Software, 36(3), 1–48.</span>
+                            R with the metafor package. Journal of Statistical Software, 36(3), 1-48.</span>
                           <a href="https://www.metafor-project.org/" target="_blank" class="tool-link"> <i
                               class="fas fa-external-link-alt"></i> Visit Tool </a>
                         </div>
@@ -2366,7 +2354,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                           supporting binary, continuous, and diagnostic test accuracy data with various visualization tools.</p>
                         <div class="card-footer">
                           <span class="citation-text">Balduzzi, S., Rücker, G., & Schwarzer, G. (2019). How to perform a
-                            meta-analysis with R: A practical tutorial. Evidence-Based Mental Health, 22(4), 153–160.</span>
+                            meta-analysis with R: A practical tutorial. Evidence-Based Mental Health, 22(4), 153-160.</span>
                           <a href="https://cran.r-project.org/web/packages/meta/" target="_blank" class="tool-link"> <i
                               class="fas fa-external-link-alt"></i> Visit Tool</a>
                         </div>
@@ -2386,7 +2374,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                           approach to estimate treatment effects and evaluate consistency within networks.</p>
                         <div class="card-footer">
                           <span class="citation-text">Rücker, G. (2012). Network meta-analysis, electrical networks and graph
-                            theory. Research Synthesis Methods, 3(4), 312–324. doi: 10.1002/jrsm.1058</span><a
+                            theory. Research Synthesis Methods, 3(4), 312-324. doi: 10.1002/jrsm.1058</span><a
                             href="https://cran.r-project.org/web/packages/netmeta/" target="_blank" class="tool-link"><i
                               class="fas fa-external-link-alt"></i> Visit Tool</a>
                         </div>
@@ -2432,7 +2420,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                         <div class="card-footer">
                           <span class="citation-text">Plummer, M. (2003). JAGS: A program for analysis of Bayesian graphical
                             models using Gibbs sampling. Proceedings of the 3rd International Workshop on Distributed
-                            Statistical Computing (DSC 2003), 124, 1–10.</span>
+                            Statistical Computing (DSC 2003), 124, 1-10.</span>
                           <a href="https://mcmc-jags.sourceforge.io" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
                           </a>
@@ -2457,7 +2445,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                         <div class="card-footer">
                           <span class="citation-text">Carpenter, B., Gelman, A., Hoffman, M. D., Lee, D., Goodrich, B.,
                             Betancourt, M., Brubaker, M., Guo, J., Li, P., & Riddell, A. (2017). Stan: A probabilistic
-                            programming language. Journal of Statistical Software, 76(1), 1–32.</span>
+                            programming language. Journal of Statistical Software, 76(1), 1-32.</span>
                           <a href="https://mc-stan.org/" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
                           </a>
@@ -2482,7 +2470,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                         <div class="card-footer">
                           <span class="citation-text">Guo, J., & Riebler, A. (2018). meta4diag: An R package for multivariate
                             meta-analysis for diagnostic test accuracy studies. Journal of Statistical Software, 83(1),
-                            1–27.</span>
+                            1-27.</span>
                           <a href="https://cran.r-project.org/web/packages/meta4diag/" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
                           </a>
@@ -2530,7 +2518,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                           outputs for evidence synthesis.</p>
                         <div class="card-footer">
                           <span class="citation-text">Ding, Y., & Baio, G. (2025). bmeta: An R package for Bayesian
-                            meta-analysis and meta-regression. Journal of Statistical Software, 112(1), 1–25.</span>
+                            meta-analysis and meta-regression. Journal of Statistical Software, 112(1), 1-25.</span>
                           <a href="https://cran.r-project.org/src/contrib/Archive/bmeta/" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
                           </a>
@@ -2579,7 +2567,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                           sizes and p-values across multiple high-throughput sequencing studies.</p>
                         <div class="card-footer">
                           <span class="citation-text">Rau, A., Gallopin, M., Celeux, G., & Jaffrézic, F. (2014). Data-based
-                            worker weighting for the meta-analysis of RNA-seq data. Bioinformatics, 30(20), 2887–2894.</span>
+                            worker weighting for the meta-analysis of RNA-seq data. Bioinformatics, 30(20), 2887-2894.</span>
                           <a href="https://cran.r-project.org/web/packages/metaRNASeq/index.html" target="_blank"
                             class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
@@ -2605,7 +2593,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                         <div class="card-footer">
                           <span class="citation-text">Marot, G., Foulley, J.-L., Mayer, C.-D., & Jaffrézic, F. (2009). Moderated
                             effect size and P-value combinations for microarray meta-analyses. Bioinformatics, 25(20),
-                            2692–2699.</span>
+                            2692-2699.</span>
                           <a href="https://cran.r-project.org/web/packages/metaMA/" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
                           </a>
@@ -2677,7 +2665,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                           for Bayesian inference to fit complex hierarchical models.</p>
                         <div class="card-footer">
                           <span class="citation-text">Phillippo, D. M., et al. (2020). Multilevel network meta-regression for
-                            population-adjusted treatment comparisons. JRSS Series A, 183(3), 1189–1210.</span>
+                            population-adjusted treatment comparisons. JRSS Series A, 183(3), 1189-1210.</span>
                           <a href="https://cran.r-project.org/web/packages/multinma/" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
                           </a>
@@ -2701,7 +2689,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                           outcome effects.</p>
                         <div class="card-footer">
                           <span class="citation-text">Crippa, A., & Orsini, N. (2016). Multivariate dose-response meta-analysis:
-                            The dosresmeta R package. Journal of Statistical Software, 72(1), 1–15.</span>
+                            The dosresmeta R package. Journal of Statistical Software, 72(1), 1-15.</span>
                           <a href="https://cran.r-project.org/web/packages/dosresmeta/" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
                           </a>
@@ -2750,7 +2738,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                           distributions and generating plots.</p>
                         <div class="card-footer">
                           <span class="citation-text">Roever, C. (2020). bayesmeta: R package for Bayesian random-effects
-                            meta-analysis. Journal of Statistical Software, 93(6), 1–51.</span>
+                            meta-analysis. Journal of Statistical Software, 93(6), 1-51.</span>
                           <a href="https://cran.r-project.org/web/packages/bayesmeta/" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
                           </a>
@@ -2799,7 +2787,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                         <div class="card-footer">
                           <span class="citation-text">Belbasis, L., Bellou, V., Ioannidis, J. P. A., Tzoulaki, I., & Evangelou,
                             E. (2022). metaumbrella: An R package for conducting umbrella reviews. World Psychiatry, 21(1),
-                            160–161.</span>
+                            160-161.</span>
                           <a href="https://metaumbrella.org" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
                           </a>
@@ -2847,7 +2835,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                           overall effect and between-study heterogeneity.</p>
                         <div class="card-footer">
                           <span class="citation-text">Beath, K. J. (2016). metaplus: An R package for the analysis of robust
-                            meta-analysis and meta-regression. Journal of Statistical Software, 71(8), 1–21.</span>
+                            meta-analysis and meta-regression. Journal of Statistical Software, 71(8), 1-21.</span>
                           <a href="https://cran.r-project.org/web/packages/metaplus/" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
                           </a>
@@ -2897,7 +2885,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                         <div class="card-footer">
                           <span class="citation-text">McGrath, S., Zhao, X., Steele, R., Benedetti, A., & Schünemann, H. J.
                             (2020). metamedian: An R package for meta-analyzing medians. Research Synthesis Methods, 11(6),
-                            934–941.</span>
+                            934-941.</span>
                           <a href="https://cran.r-project.org/web/packages/metamedian/" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
                           </a>
@@ -2920,7 +2908,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                           It is particularly useful for diagnostic accuracy studies and offers robust estimation techniques.</p>
                         <div class="card-footer">
                           <span class="citation-text">Guolo, A., & Varin, C. (2017). metaLik: An R package for likelihood
-                            inference in meta-analysis. Statistical Methods in Medical Research, 26(6), 2553–2569.</span>
+                            inference in meta-analysis. Statistical Methods in Medical Research, 26(6), 2553-2569.</span>
                           <a href="https://cran.r-project.org/web/packages/metaLik/" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
                           </a>
@@ -2944,7 +2932,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                           meta-analysis and network meta-analysis with flexible model specifications.</p>
                         <div class="card-footer">
                           <span class="citation-text">Bürkner, P. C. (2017). brms: An R package for Bayesian multilevel models
-                            using Stan. Journal of Statistical Software, 80(1), 1–28.</span>
+                            using Stan. Journal of Statistical Software, 80(1), 1-28.</span>
                           <a href="https://cran.r-project.org/web/packages/brms/" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
                           </a>
@@ -3017,7 +3005,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                           correlated errors often found in hierarchical or longitudinal data structures.</p>
                         <div class="card-footer">
                           <span class="citation-text">Fisher, Z., & Tipton, E. (2015). robumeta: An R package for robust
-                            variance estimation in meta-analysis. Research Synthesis Methods, 6(3), 310–316.</span>
+                            variance estimation in meta-analysis. Research Synthesis Methods, 6(3), 310-316.</span>
                           <a href="https://cran.r-project.org/web/packages/robumeta/" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
                           </a>
@@ -3158,7 +3146,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                           analyses on incomplete datasets commonly encountered in evidence synthesis.</p>
                         <div class="card-footer">
                           <span class="citation-text">van Buuren, S., & Groothuis-Oudshoorn, K. (2011). mice: Multivariate
-                            Imputation by Chained Equations in R. Journal of Statistical Software, 45(3), 1–67. doi.org.</span>
+                            Imputation by Chained Equations in R. Journal of Statistical Software, 45(3), 1-67. doi.org.</span>
                           <a href="https://cran.r-project.org/web/packages/mice/" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
                           </a>
@@ -3212,7 +3200,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                         </p>
                         <div class="card-footer"> <span class="citation-text">Pick, J. L., Nakagawa, S., & Noble, D. W. (2019).
                             metaDigitise: An R package for reproducible data extraction from figures. Methods in Ecology and
-                            Evolution, 10(3), 426–431. doi.org.</span> <a
+                            Evolution, 10(3), 426-431. doi.org.</span> <a
                             href="https://cran.r-project.org/web/packages/metaDigitise/index.html" target="_blank"
                             class="tool-link"> <i class="fas fa-external-link-alt"></i> Visit Tool </a> </div>
                         <div class="card-footer"><a href="https://github.com/daniel1noble/metaDigitise" target="_blank"
@@ -3260,7 +3248,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                         <div class="card-footer">
                           <span class="citation-text">Li, X., Dusseldorp, E., & Meulman, J. J. (2019). A flexible approach to
                             identify interaction effects between moderators in meta-analysis. Research Synthesis Methods, 10(1),
-                            134–152. doi.org.</span>
+                            134-152. doi.org.</span>
                           <a href="https://cran.r-project.org/web/packages/metacart/metacart.pdf" target="_blank"
                             class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
@@ -3320,7 +3308,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                         <div class="card-footer"> <span class="citation-text">Reitsma, J. B., Glas, A. S., Rutjes, A. S.,
                             Scholten, R. J., Bossuyt, P. M., & Zwinderman, A. H. (2005). Bivariate analysis of sensitivity and
                             specificity afforded a good summary of diagnostic test accuracy. Journal of Clinical Epidemiology,
-                            58(10), 982–990. doi.org</span> <a href="https://cran.r-project.org/src/contrib/Archive/Metatron/"
+                            58(10), 982-990. doi.org</span> <a href="https://cran.r-project.org/src/contrib/Archive/Metatron/"
                             target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool </a> </div>
                         <div class="card-footer"><a href="https://github.com/cran/Metatron" target="_blank" class="tool-link"><i
@@ -3339,7 +3327,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                         <div class="card-footer"> <span class="citation-text">Seo, M., Furukawa, T. A., Veroniki, A. A.,
                             Pillinger, T., Tomlinson, A., Salanti, G., Cipriani, A., & Efthimiou, O. (2021). The Kilim plot: A
                             tool for visualizing network meta-analysis results for multiple outcomes. Research Synthesis
-                            Methods, 12(1), 86–95.</span> <a href="https://cinema.ispm.unibe.ch/shinies/kilim/" target="_blank"
+                            Methods, 12(1), 86-95.</span> <a href="https://cinema.ispm.unibe.ch/shinies/kilim/" target="_blank"
                             class="tool-link"> <i class="fas fa-external-link-alt"></i> Visit Tool </a> </div>
                         <div class="card-footer"><a href="https://github.com/EGOstinelli/Vitruvian-plot/" target="_blank"
                             class="tool-link"><i class="fas fa-external-link-alt"></i> GitHub Repository</a></div>
@@ -3355,7 +3343,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                           simplifies the implementation of hierarchical models using JAGS and includes tools for conflict of
                           evidence analysis.</p>
                         <div class="card-footer"> <span class="citation-text">Verde, P. E. (2019). bamdit: An R Package for
-                            Bayesian Meta-Analysis of Diagnostic Test Data. Journal of Statistical Software, 91(9), 1–30.
+                            Bayesian Meta-Analysis of Diagnostic Test Data. Journal of Statistical Software, 91(9), 1-30.
                             doi.org.</span> <a href="https://cran.r-project.org/package=bamdit" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool </a> </div>
                         <div class="card-footer"><a href="https://github.com/cran/bamdit" target="_blank" class="tool-link"><i
@@ -3373,7 +3361,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                           treatment ranking and network diagnostics.</p>
                         <div class="card-footer"> <span class="citation-text">Lin, L., Zhang, J., Hodges, J. S., & Chu, H.
                             (2017). pcnetmeta: An R Package for Arm-Based Network Meta-Analysis. Journal of Statistical
-                            Software, 80(5), 1–25. doi.org.</span> <a href="https://CRAN.R-project.org/package=pcnetmeta"
+                            Software, 80(5), 1-25. doi.org.</span> <a href="https://CRAN.R-project.org/package=pcnetmeta"
                             target="_blank" class="tool-link"> <i class="fas fa-external-link-alt"></i> Visit Tool </a> </div>
                         <div class="card-footer"> <a href="https://github.com/cran/pcnetmeta" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> GitHub Repository </a> </div>
@@ -3389,7 +3377,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                           exact posterior inference. It supports correlated risks within studies and provides inference for odds
                           ratios, relative risks, and risk differences.</p>
                         <div class="card-footer"> <span class="citation-text">Luo, S., Chen, Y., Su, X., & Chu, H. (2014).
-                            mmeta: An R package for multivariate meta-analysis. Statistics in Medicine, 33(8), 1434–1454.
+                            mmeta: An R package for multivariate meta-analysis. Statistics in Medicine, 33(8), 1434-1454.
                             doi.org.</span> <a href="https://CRAN.R-project.org/package=mmeta" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool </a> </div>
                         <div class="card-footer"> <a href="https://github.com/cran/mmeta" target="_blank" class="tool-link"> <i
@@ -3406,7 +3394,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                           using Dirichlet process priors. It supports non-normal effect distributions, provides posterior
                           summaries, and includes functions for Bayes factors.</p>
                         <div class="card-footer"> <span class="citation-text">Burr, D. (2012). bspmma: An R Package for Bayesian
-                            Semiparametric Models for Meta-Analysis. Journal of Statistical Software, 50(4), 1–23.
+                            Semiparametric Models for Meta-Analysis. Journal of Statistical Software, 50(4), 1-23.
                             doi.org.</span> <a href="https://CRAN.R-project.org/package=bspmma" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool </a> </div>
                         <div class="card-footer"> <a href="https://github.com/cran/bspmma" target="_blank" class="tool-link"> <i
@@ -3425,7 +3413,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                         </p>
                         <div class="card-footer"> <span class="citation-text">Pedder, H., Dias, S., Bennetts, M., Boucher, M., &
                             Welton, N. J. (2021). Joining the dots: Linking disconnected networks of evidence using
-                            dose-response model-based network meta-analysis. Medical Decision Making, 41(2), 194–208.
+                            dose-response model-based network meta-analysis. Medical Decision Making, 41(2), 194-208.
                             doi.org.</span> <a href="https://CRAN.R-project.org/package=MBNMAdose" target="_blank"
                             class="tool-link"> <i class="fas fa-external-link-alt"></i> Visit Tool </a> </div>
                         <div class="card-footer"> <a href="https://github.com/hugaped/MBNMAdose" target="_blank"
@@ -3522,7 +3510,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                           methods for meta-analysis when effect sizes are not available.</p>
                         <div class="card-footer">
                           <span class="citation-text">Dewey, M. (2024). metap: An R package for combining p-values. Journal of
-                            Statistical Software, 108(1), 1–21.</span>
+                            Statistical Software, 108(1), 1-21.</span>
                           <a href="https://cran.r-project.org/package=metap" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
                           </a>
@@ -3544,7 +3532,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                         <div class="card-footer">
                           <span class="citation-text">Wetterslev, J., Thorlund, K., Brok, J., & Gluud, C. (2008). Trial
                             sequential analysis may establish when firm evidence is reached in cumulative meta-analysis. Journal
-                            of Clinical Epidemiology, 61(1), 64–75.</span>
+                            of Clinical Epidemiology, 61(1), 64-75.</span>
                           <a href="https://cran.r-project.org/package=RTSA" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
                           </a>
@@ -3566,7 +3554,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                         <div class="card-footer">
                           <span class="citation-text">Sera, F., Armstrong, B., Blangiardo, M., & Gasparrini, A. (2019). An
                             extended mixed-effects framework for meta-analysis. Statistics in Medicine, 38(29),
-                            5429–5444.</span>
+                            5429-5444.</span>
                           <a href="https://cran.r-project.org/package=mixmeta" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
                           </a>
@@ -3587,8 +3575,8 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                           checking response consistency.</p>
                         <div class="card-footer">
                           <span class="citation-text">Spineli, L. M. (2024). Local inconsistency detection using the
-                            Kullback–Leibler divergence in Bayesian network meta-analysis. Research Synthesis Methods, 15(7),
-                            1083–1098.</span>
+                            Kullback-Leibler divergence in Bayesian network meta-analysis. Research Synthesis Methods, 15(7),
+                            1083-1098.</span>
                           <a href="https://cran.r-project.org/package=rnmamod" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
                           </a>
@@ -3652,7 +3640,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                         <div class="card-footer">
                           <span class="citation-text">Gronau, Q. F., Heck, D. W., Berkhout, S. W., Haaf, J. M., & Wagenmakers,
                             E. J. (2021). A primer on Bayesian model-averaged meta-analysis. Advances in Methods and Practices
-                            in Psychological Science, 4(3), 1–19.</span>
+                            in Psychological Science, 4(3), 1-19.</span>
                           <a href="https://cran.r-project.org/package=metaBMA" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
                           </a>
@@ -3673,7 +3661,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                           sensitive results are to publication bias.</p>
                         <div class="card-footer">
                           <span class="citation-text">Schwarzer, G., Carpenter, J. R., & Rücker, G. (2019). How to perform a
-                            meta-analysis with R: A practical tutorial. Evidence-Based Mental Health, 22(4), 153–160.</span>
+                            meta-analysis with R: A practical tutorial. Evidence-Based Mental Health, 22(4), 153-160.</span>
                           <a href="https://cran.r-project.org/package=metasens" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
                           </a>
@@ -3715,7 +3703,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                           hierarchical models.</p>
                         <div class="card-footer">
                           <span class="citation-text">Günhan, B. K., Röver, C., & Friede, T. (2020). MetaStan: An R package for
-                            Bayesian (model-based) meta-analysis using Stan. Research Synthesis Methods, 11(2), 173–185.</span>
+                            Bayesian (model-based) meta-analysis using Stan. Research Synthesis Methods, 11(2), 173-185.</span>
                           <a href="https://cran.r-project.org/package=MetaStan" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
                           </a>
@@ -3778,7 +3766,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                           using multivariate normal distributions.</p>
                         <div class="card-footer">
                           <span class="citation-text">Chen, H., Manning, A. K., & Dupuis, J. (2012). A method of moments
-                            estimator for random effect multivariate meta-analysis. Biometrics, 68(4), 1278–1284.</span>
+                            estimator for random effect multivariate meta-analysis. Biometrics, 68(4), 1278-1284.</span>
                           <a href="https://cran.r-project.org/package=mvtmeta" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
                           </a>
@@ -3800,7 +3788,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                         <div class="card-footer">
                           <span class="citation-text">Luo, W., Cao, J., & Wampold, B. E. (2017). A Monte Carlo based
                             heterogeneity test for meta-analysis with standardized mean differences. Multivariate Behavioral
-                            Research, 52(1), 53–67.</span>
+                            Research, 52(1), 53-67.</span>
                           <a href="https://cran.r-project.org/package=mc.heterogeneity" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
                           </a>
@@ -3821,7 +3809,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                           synthesis.</p>
                         <div class="card-footer">
                           <span class="citation-text">Verde, P. E. (2019). The hierarchical meta‐regression approach for
-                            Bayesian evidence synthesis. Biometrical Journal, 61(3), 514–536.</span>
+                            Bayesian evidence synthesis. Biometrical Journal, 61(3), 514-536.</span>
                           <a href="https://cran.r-project.org/package=jarbes" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
                           </a>
@@ -3843,7 +3831,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                         <div class="card-footer">
                           <span class="citation-text">Bulté, I., & Onghena, P. (2013). The Single-Case Data Analysis package:
                             Analysing single-case experiments with R software. Journal of Modern Applied Statistical Methods,
-                            12(2), 450–478.</span>
+                            12(2), 450-478.</span>
                           <a href="https://cran.r-project.org/package=SCMA" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
                           </a>
@@ -3927,7 +3915,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                         <div class="card-footer">
                           <span class="citation-text">van Assen, M. A., van Aert, R. C., & Wicherts, J. M. (2015). Meta-analysis
                             using effect size distributions of only statistically significant studies. Psychological Methods,
-                            20(3), 293–309.</span>
+                            20(3), 293-309.</span>
                           <a href="https://cran.r-project.org/package=puniform" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
                           </a>
@@ -3948,7 +3936,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                           meta-analysis of binary and continuous outcomes.</p>
                         <div class="card-footer">
                           <span class="citation-text">Seo, M., & Schmid, C. H. (2023). A gentle introduction to Bayesian network
-                            meta-analysis using an automated R package. Multivariate Behavioral Research, 58(4), 706–722.</span>
+                            meta-analysis using an automated R package. Multivariate Behavioral Research, 58(4), 706-722.</span>
                           <a href="https://cran.r-project.org/package=bnma" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
                           </a>
@@ -3992,7 +3980,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                           <span class="citation-text">Seitidis, G., Tsokani, S., Christogiannis, C., Kontouli, K. M., Fyraridis,
                             A., Nikolakopoulos, S., Veroniki, A. A., & Mavridis, D. (2023). Graphical tools for visualizing the
                             results of network meta-analysis of multicomponent interventions. Research Synthesis Methods, 14(3),
-                            382–395.</span>
+                            382-395.</span>
                           <a href="https://cran.r-project.org/package=viscomp" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
                           </a>
@@ -4036,7 +4024,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                           <span class="citation-text">Noma, H., Matsushima, Y., & Teramukai, S. (2021). Bootstrap confidence
                             intervals for the AUC of summary ROC curves and some related AUC-based inference methods in
                             meta-analysis of diagnostic tests. Communications in Statistics - Theory and Methods, 50(16),
-                            3854–3870. doi.org</span>
+                            3854-3870. doi.org</span>
                           <a href="https://cran.r-project.org/package=dmetatools" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
                           </a>
@@ -4058,7 +4046,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                         <div class="card-footer">
                           <span class="citation-text">Joshi, M., Pustejovsky, J. E., & Beretvas, S. N. (2022). Cluster wild
                             bootstrapping to handle dependent effect sizes in meta-analysis with a small number of studies.
-                            Research Synthesis Methods, 13(4), 457–477.</span>
+                            Research Synthesis Methods, 13(4), 457-477.</span>
                           <a href="https://cran.r-project.org/package=wildmeta" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
                           </a>
@@ -4080,7 +4068,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                         <div class="card-footer">
                           <span class="citation-text">Gasparrini, A., Armstrong, B., & Kenward, M. G. (2012). Multivariate
                             meta-analysis for non-linear and other multi-parameter associations. Statistics in Medicine, 31(29),
-                            3821–3839. doi.org.</span>
+                            3821-3839. doi.org.</span>
                           <a href="https://cran.r-project.org/package=mvmeta" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
                           </a>
@@ -4123,7 +4111,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                         <div class="card-footer">
                           <span class="citation-text">Noma, H., Hamura, Y., Sugasawa, S., & Furukawa, T. A. (2023). Improved
                             methods to construct prediction intervals for network meta‐analysis. Research Synthesis Methods,
-                            14(6), 794–806. https://doi.org/10.1002/jrsm.1651</span>
+                            14(6), 794-806. https://doi.org/10.1002/jrsm.1651</span>
                           <a href="https://cran.r-project.org/package=PINMA" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
                           </a>
@@ -4186,7 +4174,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                         <div class="card-footer">
                           <span class="citation-text">Kabali, C. (2025). AppRaise: Software for quantifying evidence uncertainty
                             in systematic reviews using a posterior mixture model. Journal of Evaluation in Clinical Practice,
-                            31, 1–12. https://doi.org/10.1111/jep.70272</span>
+                            31, 1-12. https://doi.org/10.1111/jep.70272</span>
                           <a href="https://cran.r-project.org/package=appraise" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
                           </a>
@@ -4273,7 +4261,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                         <div class="card-footer">
                           <span class="citation-text">Magosi, L. E., Hopewell, J. C., & Farrall, M. (2019). getspres: SPRE
                             statistics for exploring heterogeneity in genetic association meta-analyses. Bioinformatics, 35(21),
-                            4490–4492. doi.org</span>
+                            4490-4492. doi.org</span>
                           <a href="https://magosil86.github.io/getspres/" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
                           </a>
@@ -4295,7 +4283,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                         <div class="card-footer">
                           <span class="citation-text">Zabriskie, B. N., Corcoran, C., & Senchaudhuri, P. (2021). A
                             permutation-based approach for heterogeneous meta-analyses of rare events. Statistics in Medicine,
-                            40(25), 5587–5604. doi.org.</span>
+                            40(25), 5587-5604. doi.org.</span>
                           <a href="https://cran.r-project.org/package=rema" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
                           </a>
@@ -4316,7 +4304,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                         </p>
                         <div class="card-footer">
                           <span class="citation-text">Bonett, D. G. (2015). "Varying coefficient meta-analysis methods for odds
-                            ratios and risk ratios." Psychological Methods, 20(3), 394–406. DOI: 10.1037/met0000032.</span>
+                            ratios and risk ratios." Psychological Methods, 20(3), 394-406. DOI: 10.1037/met0000032.</span>
                           <a href="https://cran.r-project.org/package=vcmeta" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
                           </a>
@@ -4423,7 +4411,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                           meta-regression models.</p>
                         <div class="card-footer">
                           <span class="citation-text">Van Lissa, C. J., van Erp, S., & Clapper, E. B. (2023). Selecting relevant
-                            moderators with Bayesian regularized meta-regression. Research Synthesis Methods, 14(5), 711–725.
+                            moderators with Bayesian regularized meta-regression. Research Synthesis Methods, 14(5), 711-725.
                             doi.org</span>
                           <a href="https://cjvanlissa.github.io/pema/" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
@@ -4465,7 +4453,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                         <p class="card-desc">Outlier detection and influence diagnostics for meta-analysis.</p>
                         <div class="card-footer">
                           <span class="citation-text">Noma, H. (2020). "Bootstrap-based outlier detection and influence
-                            diagnostics in meta-analysis." Research Synthesis Methods, 11(5), 652–665. DOI:
+                            diagnostics in meta-analysis." Research Synthesis Methods, 11(5), 652-665. DOI:
                             10.1002/jrsm.1420.</span>
                           <a href="https://cran.r-project.org/web/packages/boutliers/boutliers.pdf" target="_blank"
                             class="tool-link">
@@ -4531,7 +4519,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                         </p>
                         <div class="card-footer">
                           <span class="citation-text">Rufibach, K. (2011). Selection models with monotone weight functions in
-                            meta-analysis. Biometrics Journal, 53(4), 689–704. doi.org.</span>
+                            meta-analysis. Biometrics Journal, 53(4), 689-704. doi.org.</span>
                           <a href="https://cran.r-project.org/package=selectMeta" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
                           </a>
@@ -4552,7 +4540,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                         <div class="card-footer">
                           <span class="citation-text">Günhan, B. K., Friede, T., & Held, L. (2018). A design-by-treatment
                             interaction model for network meta-analysis and meta-regression with integrated nested Laplace
-                            approximations. Research Synthesis Methods, 9(2), 179–194.</span>
+                            approximations. Research Synthesis Methods, 9(2), 179-194.</span>
                           <a href="https://cran.r-project.org/package=nmaINLA" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
                           </a>
@@ -4573,7 +4561,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                         <div class="card-footer">
                           <span class="citation-text">Vembye, M. H., Pustejovsky, J. E., & Pigott, T. D. (2024). Conducting
                             power analysis for meta-analysis with dependent effect sizes: Common guidelines and an introduction
-                            to the POMADE R package. Research Synthesis Methods, 15(6), 1214–1230.</span>
+                            to the POMADE R package. Research Synthesis Methods, 15(6), 1214-1230.</span>
                           <a href="https://cran.r-project.org/package=POMADE" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
                           </a>
@@ -4679,7 +4667,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                         <div class="card-footer">
                           <span class="citation-text">Weber, S., Li, Y., Seaman, J. W., Kakizume, T., & Schmidli, H. (2021).
                             "Applying Meta-Analytic-Predictive Priors with the R Bayesian Evidence Synthesis Tools."
-                            Journal of Statistical Software, 100(19), 1–32.</span>
+                            Journal of Statistical Software, 100(19), 1-32.</span>
                           <a href="https://cran.r-project.org/package=RBesT" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
                           </a>
@@ -4724,7 +4712,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                           <span class="citation-text">Mathur, M. B. (2024).
                             "Sensitivity analysis for the interactive effects of internal bias and publication bias in
                             meta‐analyses."
-                            Research Synthesis Methods, 15(1), 21–43.</span>
+                            Research Synthesis Methods, 15(1), 21-43.</span>
                           <a href="https://cran.r-project.org/package=multibiasmeta" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
                           </a>
@@ -4790,7 +4778,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                           <span class="citation-text">Pedder, H., Dias, S., Bennetts, M., Boucher, M., & Welton, N. J. (2019).
                             "Modelling time‐course relationships with multiple treatments: Model‐based network meta‐analysis for
                             continuous summary outcomes."
-                            Research Synthesis Methods, 10(2), 267–286.</span>
+                            Research Synthesis Methods, 10(2), 267-286.</span>
                           <a href="https://hugaped.github.io/MBNMAtime/" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
                           </a>
@@ -5000,7 +4988,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                         <p class="card-desc">Inclusive summary function tools for meta-analysis.</p>
                         <div class="card-footer">
                           <span class="citation-text">Fang, K., Ren, R., Zhang, Q., & Ma, S. (2022). iSFun: an R package for
-                            integrative dimension reduction analysis. Bioinformatics, 38(11), 3134–3135.</span>
+                            integrative dimension reduction analysis. Bioinformatics, 38(11), 3134-3135.</span>
                           <a href="https://cran.r-project.org/package=iSFun" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
                           </a>
@@ -5175,7 +5163,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                           using machine learning.</p>
                         <div class="card-footer"><span class="citation-text">Lever, J., & Jones, S. J. (2017). Kindred: Joint
                             entity and relation extraction using selected corpus-wide feature subsets. Bioinformatics, 33(17),
-                            2771–2773.</span><a href="https://kindred.readthedocs.io/en/stable/" target="_blank"
+                            2771-2773.</span><a href="https://kindred.readthedocs.io/en/stable/" target="_blank"
                             class="tool-link"><i class="fas fa-external-link-alt"></i> Visit Tool</a></div>
                         <div class="card-footer"><a href="https://github.com/jakelever/kindred" target="_blank"
                             class="tool-link"><i class="fas fa-external-link-alt"></i> GitHub Repository</a></div>
@@ -5239,7 +5227,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                         <h3 class="card-title">GROBID</h3>
                         <p class="card-desc">A machine learning library and tool for extracting structured information
                           (bibliographic data, tables, headers) from scientific documents in PDF format.</p>
-                        <div class="card-footer"><span class="citation-text">GROBID. (2008–2025). GROBID: A machine learning
+                        <div class="card-footer"><span class="citation-text">GROBID. (2008-2025). GROBID: A machine learning
                             software for extracting information from scholarly documents [Computer software]. Available at
                             GitHub.</span><a href="https://grobid.github.io/" target="_blank" class="tool-link"><i
                               class="fas fa-external-link-alt"></i> Visit Tool</a></div>
@@ -5274,7 +5262,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                           extract text from images and scanned PDFs.</p>
                         <div class="card-footer"><span class="citation-text">Smith, R. (2007). An overview of the Tesseract OCR
                             engine. Proceedings of the Ninth International Conference on Document Analysis and Recognition (ICDAR
-                            2007), 2, 629–633.</span><a href="https://tesseract-ocr.github.io/" target="_blank"
+                            2007), 2, 629-633.</span><a href="https://tesseract-ocr.github.io/" target="_blank"
                             class="tool-link"><i class="fas fa-external-link-alt"></i> Visit Tool</a></div>
                         <div class="card-footer"><a href="https://github.com/tesseract-ocr/tesseract" target="_blank"
                             class="tool-link"><i class="fas fa-external-link-alt"></i> GitHub Repository</a></div>
@@ -5339,7 +5327,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                           clinical text, ideal for extraction and NLP tasks.</p>
                         <div class="card-footer"><span class="citation-text">Neumann, M., King, D., Beltagy, I., & Ammar, W.
                             (2019). ScispaCy: Fast and robust models for biomedical natural language processing. Proceedings of
-                            the 18th BioNLP Workshop and Shared Task, 319–327.</span><a href="https://allenai.github.io/scispacy/"
+                            the 18th BioNLP Workshop and Shared Task, 319-327.</span><a href="https://allenai.github.io/scispacy/"
                             target="_blank" class="tool-link"><i class="fas fa-external-link-alt"></i> Visit Tool</a></div>
                         <div class="card-footer"><a href="https://github.com/allenai/scispacy" target="_blank"
                             class="tool-link"><i class="fas fa-external-link-alt"></i> GitHub Repository</a></div>
@@ -5536,7 +5524,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                         <div class="card-footer">
                           <span class="citation-text">Gansner, E. R., & North, S. C. (2000). An open graph visualization system
                             and its applications to software engineering. Software: Practice and Experience, 30(11),
-                            1203–1233.</span>
+                            1203-1233.</span>
                           <a href="https://graphviz.org/" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
                           </a>
@@ -5559,7 +5547,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                         <div class="card-footer">
                           <span class="citation-text">Lamy, J. B., Venot, A., & Duclos, C. (2015). PyMedTermino: an open-source
                             generic API for advanced terminology services. Studies in Health Technology and Informatics, 210,
-                            924–928.</span>
+                            924-928.</span>
                           <a href="https://pypi.org/project/PyMedTermino/" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
                           </a>
@@ -5584,7 +5572,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                           <span class="citation-text">Cock, P. J., Antao, T., Chang, J. T., Chapman, B. A., Cox, C. J., Dalke,
                             A., Friedberg, I., Hamelryck, T., Kauff, F., Wilczynski, B., & de Hoon, M. J. (2009). Biopython:
                             freely available Python tools for computational molecular biology and bioinformatics.
-                            Bioinformatics, 25(11), 1422–1423.</span>
+                            Bioinformatics, 25(11), 1422-1423.</span>
                           <a href="https://biopython.org/" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
                           </a>
@@ -5607,7 +5595,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                         <div class="card-footer">
                           <span class="citation-text">Jurka, T. P., Collingwood, L., Boydstun, A. E., Grossman, E., & van
                             Atteveldt, W. (2013). RTextTools: A supervised learning package for text classification. The R
-                            Journal, 5(1), 6–12.</span>
+                            Journal, 5(1), 6-12.</span>
                           <a href="http://www.rtexttools.com" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
                           </a>
@@ -5697,7 +5685,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                           themes within large sets of abstracts or full-text documents.</p>
                         <div class="card-footer">
                           <span class="citation-text">Grün, B., & Hornik, K. (2011). topicmodels: An R Package for Fitting Topic
-                            Models. Journal of Statistical Software, 40(13), 1–30.</span>
+                            Models. Journal of Statistical Software, 40(13), 1-30.</span>
                           <a href="https://cran.r-project.org/web/packages/topicmodels/" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
                           </a>
@@ -5742,7 +5730,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                         <div class="card-footer">
                           <span class="citation-text">Straka, M., & Straková, J. (2017). Tokenizing, POS Tagging, Lemmatizing
                             and Parsing UD 2.0 with UDPipe. Proceedings of the CoNLL 2017 Shared Task: Multilingual Parsing from
-                            Raw Text to Universal Dependencies, 88–99. doi.org.</span>
+                            Raw Text to Universal Dependencies, 88-99. doi.org.</span>
                           <a href="https://bnosac.github.io/udpipe/en/" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
                           </a>
@@ -5788,7 +5776,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                         <div class="card-footer">
                           <span class="citation-text">Pedregosa, F., Varoquaux, G., Gramfort, A., Michel, V., Thirion, B.,
                             Grisel, O., ... & Duchesnay, E. (2011). Scikit-learn: Machine learning in Python. Journal of Machine
-                            Learning Research, 12, 2825–2830. www.jmlr.org.</span>
+                            Learning Research, 12, 2825-2830. www.jmlr.org.</span>
                           <a href="https://scikit-learn.org/" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
                           </a>
@@ -5811,7 +5799,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                         <div class="card-footer">
                           <span class="citation-text">Wolf, T., Debut, L., Sanh, V., Chaumond, J., Delangue, C., Moi, A., ... &
                             Rush, A. M. (2020). Transformers: State-of-the-Art Natural Language Processing. Proceedings of the
-                            2020 Conference on Empirical Methods in Natural Language Processing: System Demonstrations, 38–45.
+                            2020 Conference on Empirical Methods in Natural Language Processing: System Demonstrations, 38-45.
                             doi.org.</span>
                           <a href="https://huggingface.co/docs/transformers/" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
@@ -5902,7 +5890,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                         <div class="card-footer">
                           <span class="citation-text">Řehůřek, R., & Sojka, P. (2010). Software Framework for Topic Modelling
                             with Large Corpora. Proceedings of the LREC 2010 Workshop on New Challenges for NLP Frameworks,
-                            45–50.</span>
+                            45-50.</span>
                           <a href="https://radimrehurek.com/gensim/" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
                           </a>
@@ -6064,7 +6052,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                           to search PubMed, download records, and fetch linked data programmatically.</p>
                         <div class="card-footer">
                           <span class="citation-text">Winter, D. J. (2017). rentrez: An R package for the NCBI e-utilities API.
-                            The R Journal, 9(2), 520–526. doi.org.</span>
+                            The R Journal, 9(2), 520-526. doi.org.</span>
                           <a href="https://docs.ropensci.org/rentrez/" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
                           </a>
@@ -6142,7 +6130,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                         <div class="card-footer">
                           <span class="citation-text">Pallath, A., & Zhang, Q. (2022). Paperfetcher: A tool to automate
                             handsearching and citation searching for systematic reviews. Research Synthesis Methods, 14(2),
-                            323–335.</span>
+                            323-335.</span>
                           <a href="https://paperfetcher.github.io" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
                           </a>
@@ -6288,7 +6276,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
                           <span class="citation-text">Ferguson, C., Araújo, D., Faulk, L., Gou, Y., Hamelers, A., Huang, Z.,
                             Ide-Smith, M., Levchenko, M., Marinos, N., Nambiar, R., Nassar, M., Parkin, M., Pi, X., Rahman, F.,
                             Rogers, F., Roochun, Y., Saha, S., Selim, M., Shafique, Z., … McEntyre, J. (2020). Europe PMC in
-                            2020. Nucleic Acids Research, 49(D1), D1507–D1514. https://doi.org/10.1093/nar/gkaa994.</span>
+                            2020. Nucleic Acids Research, 49(D1), D1507-D1514. https://doi.org/10.1093/nar/gkaa994.</span>
                           <a href="https://docs.ropensci.org/europepmc/" target="_blank" class="tool-link">
                             <i class="fas fa-external-link-alt"></i> Visit Tool
                           </a>
@@ -6667,7 +6655,7 @@ In addition to purpose-built evidence synthesis platforms, this directory includ
 
   <script src="assets/js/main.js" defer></script>
   <script src="assets/js/security.js" defer></script>
-  <script type="module" src="assets/js/firebase.js"></script>
+  <script type="module" src="assets/js/firebase.js?v=2"></script>
 </body>
 
 </html>

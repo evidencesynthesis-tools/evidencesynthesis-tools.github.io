@@ -176,7 +176,7 @@
             
             <p>This directory presents a curated open-source ecosystem mapped in the associated <a href="https://osf.io/preprints/metaarxiv/7uskw_v1" target="_blank" rel="noopener noreferrer" class="mapping-study-link">systematic mapping study</a>, focusing on tools directly and indirectly supporting evidence synthesis.</p>
 
-            <p>It includes <span class="highlight-strong">291 verified open-source, non-proprietary tools</span> (up to early 2026) covering the entire evidence synthesis pipeline, ranging from purpose-built systematic review platforms to general-purpose libraries used by developers to build custom ES workflows.</p>
+            <p>It includes <span class="highlight-strong"><span data-count-total>291</span> verified open-source, non-proprietary tools</span> (up to early 2026), covering the entire evidence synthesis pipeline, ranging from purpose-built systematic review platforms to general-purpose libraries used by developers to build custom ES workflows - <span data-count-section="core">90</span> in Core Evidence Synthesis Software, <span data-count-section="methodologists">131</span> for Methodologists &amp; Statisticians, and <span data-count-section="developers">70</span> for Software Developers &amp; Maintainers.</p>
           </div>
           
           <div class="overview-image">
@@ -323,6 +323,21 @@
             </div>
           </div>
 
+          <div style="background: #e4f1ff; padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem;">
+            <h3 style="font-family:'Host Grotesk'; color:var(--primary-color); margin-bottom:1rem;">Adding a Tool (Counts Update Automatically)</h3>
+            <div style="margin-left: 1.5rem;">
+              <p>All tool numbers - per-section counts, the directory-wide total, and the header badge - are computed <strong>automatically</strong> from the tool cards in <code>index.html</code>. To add a tool, simply copy an existing tool card in <code>index.html</code> and paste it into the appropriate section. Every count on the site updates automatically; <strong>no manual counting is required</strong>.</p>
+            </div>
+          </div>
+
+          <div style="background: #fff8e6; padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem;">
+            <h3 style="font-family:'Host Grotesk'; color:var(--primary-color); margin-bottom:1rem;">Update Status</h3>
+            <div style="margin-left: 1.5rem;">
+              <p>The directory is complete <strong>up to early 2026</strong>, as defined by the associated mapping study. All searches and verification were performed manually by the author.</p>
+              <p>Whether the directory is maintained beyond 2026 is at the maintainer's discretion: it will be expanded in future years only if there is a genuine, demonstrated need - sustained use by the community, active contributors, or clear demand for the resource.</p>
+            </div>
+          </div>
+
           <div class="submit-container">
             <h3>Submit a tool via:</h3>
             <div class="submit-links">
@@ -402,6 +417,6 @@
 
   <script src="assets/js/about.js" defer></script>
   <script src="assets/js/security.js" defer></script>
-  <script type="module" src="assets/js/firebase.js"></script>
+  <script type="module" src="assets/js/firebase.js?v=2"></script>
 </body>
 </html>

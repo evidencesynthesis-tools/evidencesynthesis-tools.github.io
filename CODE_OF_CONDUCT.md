@@ -51,7 +51,7 @@ This Code of Conduct applies to all interactions involving **Evidence Synthesis 
 
 ## Acknowledgment
 
-By participating in Evidence Synthesis Tools —whether using the tool, contributing code, validating data, or providing feedback—you agree to follow this Code of Conduct.
+By participating in Evidence Synthesis Tools -whether using the tool, contributing code, validating data, or providing feedback-you agree to follow this Code of Conduct.
 
 ---
 

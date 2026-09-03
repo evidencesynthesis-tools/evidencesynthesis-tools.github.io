@@ -1,5 +1,4 @@
 
-
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.9.0/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.9.0/firebase-analytics.js";
 import { getFirestore, doc, getDoc, setDoc, updateDoc, increment } from "https://www.gstatic.com/firebasejs/12.9.0/firebase-firestore.js";
@@ -14,38 +13,48 @@ const firebaseConfig = {
   measurementId: "G-HGV9X2SCBZ"
 };
 
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-const db = getFirestore(app);
-const counterRef = doc(db, "stats", "total_visits");
-
-const currentPath = window.location.pathname;
-const isIndexPage = currentPath === '/' || currentPath.endsWith('index.html');
+function setVisits(text) {
+  const visitsEl = document.getElementById("visits");
+  if (visitsEl) {
+    visitsEl.innerText = text;
+  }
+}
 
 try {
-  if (isIndexPage) {
-    const snap = await getDoc(counterRef);
-    if (snap.exists()) {
-      await updateDoc(counterRef, { total_visits: increment(1) });
-    } else {
-      await setDoc(counterRef, { total_visits: 1 });
+  const app = initializeApp(firebaseConfig);
+
+  // Analytics is optional and must never block the visit counter
+  // (ad blockers and unsupported environments make getAnalytics throw).
+  try {
+    getAnalytics(app);
+  } catch (analyticsError) {
+    console.warn("Analytics unavailable, skipping: ", analyticsError);
+  }
+
+  const db = getFirestore(app);
+  const counterRef = doc(db, "stats", "total_visits");
+
+  const currentPath = window.location.pathname;
+  const isIndexPage = currentPath === '/' || currentPath.endsWith('index.html');
+
+  try {
+    if (isIndexPage) {
+      const snap = await getDoc(counterRef);
+      if (snap.exists()) {
+        await updateDoc(counterRef, { total_visits: increment(1) });
+      } else {
+        await setDoc(counterRef, { total_visits: 1 });
+      }
     }
-  }
 
-  const latestSnap = await getDoc(counterRef);
-  let count = 0;
-  if (latestSnap.exists()) {
-    count = latestSnap.data().total_visits || 0;
+    const latestSnap = await getDoc(counterRef);
+    const count = latestSnap.exists() ? (latestSnap.data().total_visits || 0) : 0;
+    setVisits("Total Visits (All Time): " + count);
+  } catch (statsError) {
+    console.error("Error updating stats: ", statsError);
+    setVisits("Stats unavailable");
   }
-
-  const visitsEl = document.getElementById("visits");
-  if (visitsEl) {
-    visitsEl.innerText = "Total Visits: " + count;
-  }
-} catch (error) {
-  console.error("Error fetching stats: ", error);
-  const visitsEl = document.getElementById("visits");
-  if (visitsEl) {
-    visitsEl.innerText = "Stats unavailable";
-  }
+} catch (initError) {
+  console.error("Error initializing Firebase: ", initError);
+  setVisits("Stats unavailable");
 }

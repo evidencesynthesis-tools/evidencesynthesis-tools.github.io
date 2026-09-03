@@ -141,11 +141,11 @@ Such tools are documented in the directory as **open-source integrations with ex
 
 This project prioritizes open-source tools to ensure:
 
-* **Transparency** – inspect underlying algorithms
-* **Reproducibility** – avoid black-box systems
-* **Sustainability** – independence from commercial vendors
-* **Innovation** – fork, modify, and build upon tools 🚀
-* **Equity** – global access without paywalls
+* **Transparency** - inspect underlying algorithms
+* **Reproducibility** - avoid black-box systems
+* **Sustainability** - independence from commercial vendors
+* **Innovation** - fork, modify, and build upon tools 🚀
+* **Equity** - global access without paywalls
 
 ---
 
@@ -226,8 +226,11 @@ This directory aims to be a comprehensive community resource.
 * GitHub Discussions [evidencesynthesis-tools/discussions](https://github.com/orgs/evidencesynthesis-tools/discussions)
 * Email to the maintainer [V.S.](mailto:pteroisvolitans12@gmail.com)
 
-### Requirements
+### Adding a tool (counts update automatically)
 
+All tool numbers - section counts, the directory-wide total, and the header badge - are **computed automatically** from the tool cards in `index.html`. To add a tool, copy an existing `.tool-card` block in `index.html` and paste it into the appropriate section (`#section-core`, `#section-methodologists`, or `#section-developers`). Every count on the site, including the total, updates automatically on page load - **no manual counting is required**.
+
+### Requirements
 * Open-source license
 * Public repository
 * No closed-source components
@@ -252,7 +255,9 @@ Artificial intelligence tools were used to support aspects of interface refineme
 
 The initial systematic search for eligible tools and software was conducted in **October 2025**, followed by continued independent searches and verification to ensure coverage of tools available up to **February 2026**.
 
-The author welcomes future contributors and collaborators to support the long-term maintenance and development of this directory. In the absence of external contributions, the author intends to perform an updated search for newly eligible tools **at least once annually** to maintain accuracy, completeness, and relevance.
+The directory is complete **up to early 2026**, as defined by the associated mapping study. All searches and verification were performed manually by the author.
+
+Whether the directory is maintained beyond 2026 is at the author's discretion: it will be expanded in future years **only if there is a genuine, demonstrated need** - sustained use by the community, active contributors, or clear demand for the resource. The author welcomes contributors and collaborators to support the long-term maintenance and development of this directory.
 
 ---
 

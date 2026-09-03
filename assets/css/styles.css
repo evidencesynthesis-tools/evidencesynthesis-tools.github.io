@@ -1230,6 +1230,9 @@ footer a:hover {
   max-width: 1400px;
   margin: 0 auto 1.5rem;
   text-align: left;
+  padding: 64px 20px 0 20px;
+  position: relative;
+  z-index: 1;
 }
 
 .back-link {

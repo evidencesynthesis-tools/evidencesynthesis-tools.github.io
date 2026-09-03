@@ -95,6 +95,60 @@
   };
 
 
+  // Tool counts are computed from the tool cards in index.html so that adding
+  // a tool there updates every number on this page automatically.
+  fetch('index.html').then(res => res.text()).then(html => {
+    const doc = new DOMParser().parseFromString(html, 'text/html');
+    const sectionIds = ['core', 'methodologists', 'developers'];
+    let total = 0;
+
+    sectionIds.forEach(id => {
+      const grid = doc.getElementById('toolsGrid-' + id);
+      const count = grid ? grid.querySelectorAll('.tool-card').length : 0;
+      total += count;
+      document.querySelectorAll('[data-count-section="' + id + '"]').forEach(el => {
+        el.textContent = count + (el.dataset.countSuffix || '');
+      });
+    });
+
+    document.querySelectorAll('[data-count-total]').forEach(el => {
+      el.textContent = total;
+    });
+
+    document.querySelectorAll('script[type="application/ld+json"]').forEach(scriptEl => {
+      const raw = scriptEl.textContent;
+      let data;
+      try { data = JSON.parse(raw); } catch (e) { return; }
+
+      let changed = false;
+      (function walk(node) {
+        if (!node || typeof node !== 'object') return;
+        if (Array.isArray(node)) { node.forEach(walk); return; }
+        Object.keys(node).forEach(key => {
+          if (key === 'description' && typeof node[key] === 'string') {
+            const updated = node[key].replace(/\bover \d+\b/, 'over ' + total).replace(/\b\d+\+/, total);
+            if (updated !== node[key]) { node[key] = updated; changed = true; }
+          }
+          walk(node[key]);
+        });
+      })(data);
+
+      if (changed) scriptEl.textContent = JSON.stringify(data);
+    });
+  }).catch(() => { /* keep the static fallback numbers */ });
+
+
+  // If firebase.js (an ES module) cannot load at all, e.g. when the site is
+  // opened directly from the filesystem (file://), replace the placeholder
+  // so the page never sits on "Loading..." indefinitely.
+  setTimeout(() => {
+    const visitsEl = document.getElementById('visits');
+    if (visitsEl && visitsEl.innerText.includes('Loading')) {
+      visitsEl.innerText = 'Stats unavailable (open the site online to see visit counts)';
+    }
+  }, 8000);
+
+
   const tabLinks = document.querySelectorAll('.tab-link');
   tabLinks.forEach(link => {
     link.addEventListener('click', function () {

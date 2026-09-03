@@ -28,6 +28,8 @@
   const scrollBtn = document.getElementById('scrollToTopBtn');
   const sectionsOverview = document.getElementById('sectionsOverview');
   const directoryBack = document.getElementById('directoryBack');
+  const homeIntro = document.getElementById('homeIntro');
+  const searchContainer = document.querySelector('.search-container');
 
   const sections = VIEW_IDS.map(id => {
     const sectionEl = document.getElementById('section-' + id);
@@ -107,7 +109,8 @@
       if (view === 'home') {
         scrollToElementTop(sectionsOverview);
       } else {
-        scrollToElementTop(directoryBack);
+        const target = sections.find(s => s.id === view);
+        scrollToElementTop(target ? target.el : directoryBack);
       }
     } else if (opts.scroll && sameView) {
       const first = sectionsInView().find(s => s.filtered.length > 0);
@@ -116,8 +119,11 @@
   }
 
   function applyViewVisibility() {
-    if (sectionsOverview) sectionsOverview.style.display = currentView === 'home' ? '' : 'none';
-    if (directoryBack) directoryBack.style.display = currentView === 'home' ? 'none' : '';
+    const isHome = currentView === 'home';
+    if (homeIntro) homeIntro.style.display = isHome ? '' : 'none';
+    if (sectionsOverview) sectionsOverview.style.display = isHome ? '' : 'none';
+    if (directoryBack) directoryBack.style.display = isHome ? 'none' : '';
+    if (searchContainer) searchContainer.style.display = isHome ? 'none' : '';
 
     sections.forEach(section => {
       const inView = currentView === 'all' || currentView === section.id;
@@ -125,8 +131,8 @@
     });
 
     const totalInView = sectionsInView().reduce((acc, s) => acc + s.filtered.length, 0);
-    noResultsMessage.style.display = (currentView !== 'home' && totalInView === 0) ? 'block' : 'none';
-    clearFiltersBtn.style.display = (searchTerm || activeCategory) ? 'block' : 'none';
+    noResultsMessage.style.display = (!isHome && totalInView === 0) ? 'block' : 'none';
+    clearFiltersBtn.style.display = (searchTerm || activeCategory || activeYear) ? 'block' : 'none';
   }
 
 
@@ -159,6 +165,7 @@
 
   function animateScroll() {
     if (!isMobile()) {
+      if (window.scrollY !== 0) window.scrollTo(0, 0);
       currentScroll += (window.targetScroll - currentScroll) * ease;
       scrollContainer.style.transform = 'translateY(' + (-currentScroll) + 'px)';
     }
@@ -187,12 +194,13 @@
 
   function scrollToDocumentY(docY) {
     if (isMobile()) {
-      window.scrollTo({ top: docY, behavior: 'smooth' });
+      window.scrollTo({ top: Math.max(0, docY - 90), behavior: 'smooth' });
       return;
     }
-  
-    const containerOffset = docY - currentScroll;
-    window.targetScroll = Math.min(Math.max(0, containerOffset - 140), maxScroll());
+
+    if (window.scrollY !== 0) window.scrollTo(0, 0);
+    window.targetScroll = Math.min(Math.max(0, docY - 90), maxScroll());
+    currentScroll = Math.min(currentScroll, window.targetScroll);
   }
 
   function scrollToElementTop(el) {
@@ -202,7 +210,7 @@
       return;
     }
     const rect = el.getBoundingClientRect();
-    scrollToDocumentY(rect.top + currentScroll);
+    scrollToDocumentY(rect.top + window.scrollY + currentScroll);
   }
 
   function scrollToSection(section) {
@@ -212,10 +220,17 @@
 
   let searchTerm = '';
   let activeCategory = null;
+  let activeYear = null;
+
+  function searchTokens() {
+    return searchTerm ? searchTerm.split(/\s+/).filter(Boolean) : [];
+  }
 
   function cardMatches(card) {
+    if (activeYear && !card.text.includes(activeYear)) return false;
     if (activeCategory && card.badge.toLowerCase() !== activeCategory.toLowerCase()) return false;
-    if (searchTerm && !card.text.includes(searchTerm)) return false;
+    const tokens = searchTokens();
+    if (tokens.length && !tokens.every(token => card.text.includes(token))) return false;
     return true;
   }
 
@@ -262,9 +277,21 @@
     syncFilterChipStates();
   }
 
+  function setActiveYear(year) {
+    activeYear = year;
+
+    if (activeYear && currentView === 'home') {
+      setView('all');
+    }
+
+    applyFilters({ scroll: !!activeYear });
+    syncFilterChipStates();
+  }
+
   function resetFilters() {
     searchTerm = '';
     activeCategory = null;
+    activeYear = null;
     searchInput.value = '';
     setView('home', { scroll: true });
     applyFilters();
@@ -461,7 +488,7 @@
       return;
     }
     const rect = targetEl.getBoundingClientRect();
-    scrollToDocumentY(rect.top + currentScroll - (window.innerHeight / 2) + (targetEl.offsetHeight / 2));
+    scrollToDocumentY(rect.top + window.scrollY + currentScroll - (window.innerHeight / 2) + (targetEl.offsetHeight / 2));
   }
 
   nextBtn.addEventListener('click', () => navigateMatch(1));
@@ -503,16 +530,58 @@
       toggleFiltersBtn.classList.remove('active');
 
       if (type === 'year') {
-        searchInput.value = label;
-        activeCategory = null;
-        setSearchTerm(label, { scroll: true });
+        setActiveYear(activeYear === label ? null : label);
       } else {
-
         setActiveCategory(activeCategory === label ? null : label);
       }
     });
 
     container.appendChild(btn);
+  }
+
+  function updateToolCounts() {
+    const total = allCards.length;
+
+    sections.forEach(section => {
+      document.querySelectorAll('[data-count-section="' + section.id + '"]').forEach(el => {
+        el.textContent = section.cards.length + (el.dataset.countSuffix || '');
+      });
+    });
+
+    document.querySelectorAll('[data-count-total]').forEach(el => {
+      el.textContent = total;
+    });
+
+    const badge = document.getElementById('toolsCountBadge');
+    if (badge) {
+      badge.src = 'https://img.shields.io/badge/Tools-' + total + '-brightgreen?style=for-the-badge';
+      badge.alt = 'Tools: ' + total;
+    }
+
+    document.querySelectorAll('script[type="application/ld+json"]').forEach(scriptEl => {
+      const raw = scriptEl.textContent;
+      let data;
+      try { data = JSON.parse(raw); } catch (e) { return; }
+
+      let changed = false;
+      (function walk(node) {
+        if (!node || typeof node !== 'object') return;
+        if (Array.isArray(node)) { node.forEach(walk); return; }
+        if (node.numberOfItems !== undefined && String(node.numberOfItems) !== String(total)) {
+          node.numberOfItems = String(total);
+          changed = true;
+        }
+        Object.keys(node).forEach(key => {
+          if (typeof node[key] === 'string' && /\b\d+\+?\b/.test(node[key]) && key === 'description') {
+            const updated = node[key].replace(/\b\d+\+/, total).replace(/\bover \d+\b/, 'over ' + total);
+            if (updated !== node[key]) { node[key] = updated; changed = true; }
+          }
+          walk(node[key]);
+        });
+      })(data);
+
+      if (changed) scriptEl.textContent = JSON.stringify(data);
+    });
   }
 
   function initFilters() {
@@ -543,7 +612,7 @@
       if (type === 'category') {
         active = !!activeCategory && value.toLowerCase() === activeCategory.toLowerCase();
       } else if (type === 'year') {
-        active = !!searchTerm && searchTerm === value.toLowerCase();
+        active = !!activeYear && value === activeYear;
       }
       btn.classList.toggle('active', active);
     });
@@ -611,6 +680,7 @@
 
 
   initFilters();
+  updateToolCounts();
   sections.forEach(section => renderSection(section));
   setView(viewFromHash(), { updateHash: false, scroll: viewFromHash() !== 'home' });
   applyFilters();
