@@ -76,7 +76,7 @@ The initial systematic search was conducted in **October 2025**, with continued 
 
 ## ⭐ Citation
 
-> Sahu, V. (2026). *Evidence Synthesis Tools: A curated directory of strictly open-source software / tools for Evidence Synthesis.* (Version 4.0). Zenodo.
+> Sahu, V. (2026). *Evidence Synthesis Tools: A curated directory of strictly open-source software / tools for Evidence Synthesis.* (Version 5.0). Zenodo.
 > [https://doi.org/10.5281/zenodo.18681868](https://doi.org/10.5281/zenodo.18681868)
 
 *Individual tools retain their original citations.*
