@@ -6,7 +6,13 @@
 [![Open Science](https://img.shields.io/badge/Open%20Science-Compliant-green)]()
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18681868.svg)](https://doi.org/10.5281/zenodo.18681868)
 
+---
+
 This directory represents an evidence synthesis ecosystem mapped in the associated [systematic mapping study](https://osf.io/preprints/metaarxiv/7uskw_v1). It covers purpose-built evidence synthesis platforms plus general-purpose computational libraries and infrastructure utilities used to build and automate custom evidence synthesis workflows. It includes **291** verified open-source, non-proprietary tools available **up to early 2026**, spanning all stages of the pipeline. It is intended for systematic review researchers and students, meta-analysis practitioners, medical/public health/environmental researchers, librarians, methodologists, open science advocates, and research software developers.
+
+
+---
+
 
 ## ❓ What is Evidence Synthesis?
 
@@ -19,6 +25,8 @@ The directory covers the full workflow: search strategy development, citation ch
 ## 🌍 Why This Matters
 
 Evidence synthesis underpins evidence-based medicine, public health, environmental science, and policy - but many widely used tools are proprietary, existing directories mix software with checklists and guidance documents, licensing is often unclear, and limited transparency restricts reproducibility. This project fills those gaps with a **strictly open-source-only, software-focused directory** with verified repositories and licenses - a discovery platform for reusable research software supporting Open Science and FAIR principles, and a foundation for interoperable, transparent tools.
+
+---
 
 ## 🔓 Inclusion Criteria (strict)
 
@@ -33,6 +41,8 @@ Only tools meeting **all** criteria are included:
 **Excluded:** EndNote, Covidence, DistillerSR, NVivo, Rayyan, Stata, SAS, and similar proprietary/freemium tools; also tools whose code is hosted exclusively on university/institutional websites (accessibility and long-term stability concerns).
 
 **External API policy:** open-source tools that interact with external databases, platforms, or APIs (e.g., literature databases or screening systems) are eligible if the software itself is fully open source with a public repository, its core functionality is transparent and reusable, and the external service is used only for data access or integration - not hidden proprietary logic. These are documented as **open-source integrations with external research infrastructure**.
+
+---
 
 ## 🧩 Why Open Source?
 
@@ -50,6 +60,8 @@ Unlike existing directories such as the **Systematic Review Toolbox (SR Toolbox)
 
 The website is intentionally plain **HTML**: no framework or dependency lock-in, long-term stability and preservation, easy editing in any text editor, and contributions possible with little or no coding experience.
 
+---
+
 ## ✨ Interface
 
 ![Interface1](screenshots/1.png)
@@ -57,6 +69,8 @@ The website is intentionally plain **HTML**: no framework or dependency lock-in,
 ![Interface2](screenshots/2.png)
 
 ![Interface3](screenshots/3.png)
+
+---
 
 ## ⭐ Contributions
 
@@ -68,11 +82,15 @@ Submit a tool via [Pull Request](https://github.com/evidencesynthesis-tools/evid
 
 **Requirements:** open-source license, public repository, no closed-source components, no paid or institutional restrictions, relevance to evidence synthesis, adequate documentation. **Not accepted:** free but closed-source tools, freemium software, commercial or license-restricted platforms.
 
+---
+
 ## Acknowledgements
 
 This project was conducted independently by the author. AI tools supported interface refinement and presentation only - **GLM-4.5V-Flash (open access)** improved layout structure and visual clarity. All conceptual development, inclusion criteria, repository/license verification, tool selection, curation, and project design were performed **manually** by the author. More info: [https://doi.org/10.5281/zenodo.18692063](https://doi.org/10.5281/zenodo.18692063), [evidencesynthesis-tools/backwork](https://github.com/evidencesynthesis-tools/backwork), [https://doi.org/10.31222/osf.io/7uskw_v1](https://doi.org/10.31222/osf.io/7uskw_v1).
 
 The initial systematic search was conducted in **October 2025**, with continued searches and verification covering tools available up to **February 2026**. The directory is complete up to early 2026, as defined by the associated mapping study; all searches and verification were performed manually by the author. Maintenance beyond 2026 is at the author's discretion - the directory will be expanded **only if there is a genuine, demonstrated need** (sustained community use, active contributors, or clear demand). Contributors and collaborators are welcome to support long-term maintenance.
+
+---
 
 ## ⭐ Citation
 
@@ -81,15 +99,17 @@ The initial systematic search was conducted in **October 2025**, with continued 
 
 *Individual tools retain their original citations.*
 
+---
+
 ##  License
 
 <a href="https://opensource.org/licenses/Apache-2.0">
   <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Apache_Feather_Logo.svg" alt="Apache 2.0 License" height="120">
 </a>
 
-© 2026 Vihaan Sahu - Open Source
+© 2026 Vihaan Sahu - Apache 2.0 License.
 
----
+
 
 ![Preview2](assets/banner1.png)
 
